@@ -1,36 +1,96 @@
-<header>
-  <%= image_tag "logo.png", id:"logo", alt:"Kamas Snow", size:"200x117" %>
-   <div id="logo-text">SHAVED ICE</div>
-</header>
+  <header>
+    <%= image_tag "logo.png", id:"logo", alt:"Kamas Snow", width:"200px",
+      height:"117px" %>
+    <div id="logo-text">SHAVED ICE</div>
+    <nav>
+      <ul class="right">
+        <li>
+          <a href="mailto:kamas.snow@gmail.com">
+            <%= image_tag "email.png", title:"email", alt:"email" %>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/kamassnow" target="_blank">
+            <%= image_tag "fb.png", title:"facebook", alt:"facebook" %>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-<nav>
-  <ul>
-    <a href="https://www.google.com/maps/@40.6397719,-111.283973,19z"><li class="location">Location</li></a>
-    <a href="hours.html"><li class="hours">Hours</li></a>
-    <a href="#"><li class="flavors">Flavors</li></a>
-  </ul>
-</nav>
+  <div id="main">
 
-<div id="main">
-  <article>
+    <article class="left-side">
+      <%= image_tag "trailer.jpg" %>
+      <section>
+        <h1>Is it hot outside?</h1>
+        <p>How about a refreshing shaved ice?  We're located in the
+          parking lot of
+          <a href="http://kamasfoodtown.com", target="_blank">Kamas Foodtown</a>
+          in the heart of beautiful Kamas, Utah.
+        </p>
+        <div class="inner-section">
+          <h2>Hours:</h2>
+          <p>Mon-Sat, 11am - 9pm</p>
+        </div>
+        <div class="inner-section">
+          <h2>Location:</h2>
+          <p>146 W. 200 S.<br/>
+            Kamas, UT  84036<br/>
+            <a href="http://maps.google.com/maps?ll=40.640565,-111.283697&z=12&t=m&hl=en-US&gl=US&mapclient=embed&q=146%20W%20200%20S%20Kamas%2C%20UT%2084036", target="_blank">view on google maps</a>
+          </p>
+      </section>
+    </article>
 
-  </article>
-</div>
+    <article class="right-side">
+      <%= image_tag "avalanche.jpg" %>
+      <section>
+        <h1>Introducing the Avalanche</h1>
+        <p>You're looking at the Peach Cobbler
+          Avalanche... vanilla ice cream, Georgia peach shaved ice, smothered in
+          heavy cream. We triple dog dare you to eat it all.  Two words:
+          <em>brain freeze</em>.
+        </p>
+        <p>We shave our ice as thin as newly fallen snow, our flavors are
+          mouth-watering, and our prices can't be beat!
+        </p>
+      </section>
+    </article>
 
-<footer>
-  <span class="left">&copy;2014 Kamas Snow</span>
-  <ul class="right">
-    <li><a href="#">home</a></li>
-    <li><a href="#">about us</a></li>
-    <li>
-      <a href="mailto:kamas.snow@gmail.com">
-        <%= image_tag "email.png", title:"email", alt:"email" %>
-      </a>
-    </li>
-    <li>
-      <a href="https://www.facebook.com/kamassnow">
-        <%= image_tag "fb.png", title:"facebook", alt:"facebook" %>
-      </a>
-    </li>
-  </ul>
-</footer>
+    <article class="left-side">
+      <%= image_tag "snow_artists.jpg" %>
+      <section>
+        <h1>Snow Artists</h1>
+        <p>You may see an empty foam cup and a block of ice.  We see a sweet
+          frozen masterpiece waiting to happen.  We love working at Kamas Snow!
+          It's the coolest summer job in town.
+        </p>
+      </section>
+    </article>
+
+    <article class="right-side">
+      <%= image_tag "kamas_snow_flier.jpg" %>
+      <section>
+        <h1>Celebrate!</h1>
+        <p>Come celebrate the last day of school...
+          and the start of summer... with a FREE SHAVED ICE.  Can you think of
+          any better way to celebrate?  We can't!
+        </p>
+      </section>
+    </article>
+
+    <article class="left-side last-article">
+      <%= image_tag "kamas_royalty_2014.jpg" %>
+      <section>
+        <h1>Your Royal Highness...</h1>
+        <p> The Kamas Fiesta Days royalty cooled off on a busy Pioneer Day
+          weekend with shaved ice. Thanks for stopping by... Aly, Hailey,
+          and Brianna.
+        </p>
+      </section>
+    </article>
+  </div>
+
+  <footer>
+    <span class="left">&copy;2014 Kamas Snow</span>
+  </footer>

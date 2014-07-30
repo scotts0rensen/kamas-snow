@@ -50,13 +50,20 @@ table {
 
 
 
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: 'BerlinSansFBDemiBold';
-  src: url('/assets/6911542873.ttf') format('truetype');
+  src: url('fonts/6911542873.ttf') format('truetype');
 }
 
 html {
-  background: url("/assets/background_snow.jpeg") no-repeat center center fixed;
+  background: url("background_snow.jpeg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -66,11 +73,29 @@ html {
 body {
   padding: 15px 0;
   min-width: 960px;
+  font-family: "europa",sans-serif;
+  color: black;
 }
 
-header, nav, div#main, footer {
+body em {
+  font-style: italic;
+}
+
+body strong {
+  font-weight: bold;
+}
+
+header, nav, article, footer {
   width: 900px;
   margin: 0 auto;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
 }
 
 #logo {
@@ -100,60 +125,91 @@ nav {
 }
 
 nav ul {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
-nav a, nav a:visited {
-  color: white;
-  text-decoration: none;
+  padding-right: 15px;
 }
 
 nav li {
   display: inline-block;
-  padding-top: 15px;
-  margin: 0;
-  width: 120px;
-  height: 45px;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: 120px 120px;
-  text-align: center;
-  z-index: 2;
-  vertical-align: bottom;
-  transition: all .1s ease-out;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow:
-    -1px -1px 0 black,
-    1px -1px 0 black,
-    -1px 1px 0 black,
-    1px 1px 0 black;
+  vertical-align: middle;
+  padding: 7px 10px;
 }
 
-.location {
-  background-image: url('/assets/cup_red.png');
+nav img {
+  width: 34px;
 }
 
-.hours {
-  background-image: url('/assets/cup_yellow.png');
+.email {
+  background-image: url('email.png');
 }
 
-.flavors {
-  background-image: url('/assets/cup_green.png');
-}
-
-nav li:hover {
-  height: 80px;
+.facebook {
+  background-image: url('fb.png');
 }
 
 #main {
-  height: 400px;
+  width: 900px;
+  margin: -3px auto 0 auto;
+}
+
+article {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  margin: 30px auto 0 auto;
+  font-size: 20px;
+  padding: 40px;
+}
+
+article h1, article p {
+  display: inline;
+  width: 320px;
+}
+
+article h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+article p {
+  padding: 20px 0 20px 0;
+  line-height: 30px;
+  font-size: 16px;
+}
+
+.inner-section p {
+  padding: 5px 0 20px 0;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+article img {
+  width: 450px;
+  border-radius: 10px;
+  border: 1px solid rgb(224,224,224);
+}
+
+.left-side h1, .left-side p, .right-side img {
+  float: left;
+}
+
+.right-side h1, .right-side p, .left-side img {
+  float: right;
+}
+
+.inner-section h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.last-article {
+  margin-bottom: 30px;
+}
+
+.hours {
+  padding-left: 5px;
 }
 
 footer {
-  position: fixed;
   bottom: 20px;
   left: 0;
   right: 0;
@@ -161,40 +217,11 @@ footer {
   background-color: rgb(22, 119, 196);
   height: 40px;
   color: #ccc;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 10px;
 }
 
 footer span {
-  padding-left: 10px;
-  padding-top: 14px;
-}
-
-.right {
-  float: right;
-}
-
-.left {
-  float: left;
-}
-
-footer ul li {
-  display: inline-block;
-  vertical-align: middle;
-  font-variant: small-caps;
-  padding: 10px 10px;
-}
-
-footer a, footer a:visited {
-  text-decoration: none;
-  color: #ccc;
-}
-
-footer a:hover, footer a:active {
-  color: white;
-  text-decoration: underline;
-}
-
-footer img {
-  width: 20px;
+  padding-left: 20px;
+  padding-top: 11px;
 }
