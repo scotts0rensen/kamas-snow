@@ -1,80 +1,54 @@
-  <header>
-    <%= image_tag "logo.png", id:"logo", alt:"Kamas Snow", width:"200px",
-      height:"117px" %>
-    <div id="logo-text">SHAVED ICE</div>
-    <nav>
-      <ul class="right">
-        <li>
-          <a href="mailto:kamas.snow@gmail.com">
-            <%= image_tag "email.png", title:"email", alt:"email" %>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/kamassnow" target="_blank">
-            <%= image_tag "fb.png", title:"facebook", alt:"facebook" %>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+<div class="main">
 
-  <div id="main">
-
-    <article class="left-side">
-      <%= image_tag "trailer.jpg" %>
-      <section>
-        <h1>Opening May 2nd, 2015</h1>
-        <p>How about a refreshing shaved ice?  Find us in the
-          parking lot of
-          <a href="http://kamasfoodtown.com", target="_blank">Kamas Foodtown</a>
-          in the heart of beautiful Kamas, Utah.
+  <article class="left-side">
+    <%= image_tag "trailer.jpg" %>
+    <section>
+      <h1>Opening May 2nd, 2015</h1>
+      <p>How about a refreshing shaved ice?  Find us in the
+        parking lot of
+        <a href="http://kamasfoodtown.com", target="_blank">Kamas Foodtown</a>
+        in the heart of beautiful Kamas, Utah.
+      </p>
+      <div class="inner-section">
+        <p>Mon-Fri:&nbsp; 2pm - 7pm<br/>
+        Sat:&nbsp; 11am - 7pm</p>
+      </div>
+      <div class="inner-section">
+        <p>146 W. 200 S.<br/>
+          Kamas, UT  84036<br/>
+          <a href="http://maps.google.com/maps?ll=40.640565,-111.283697&z=12&t=m&hl=en-US&gl=US&mapclient=embed&q=146%20W%20200%20S%20Kamas%2C%20UT%2084036", target="_blank">view on google maps</a>
         </p>
-        <div class="inner-section">
-          <p>Mon-Fri:&nbsp; 2pm - 7pm<br/>
-          Sat:&nbsp; 11am - 7pm</p>
-        </div>
-        <div class="inner-section">
-          <p>146 W. 200 S.<br/>
-            Kamas, UT  84036<br/>
-            <a href="http://maps.google.com/maps?ll=40.640565,-111.283697&z=12&t=m&hl=en-US&gl=US&mapclient=embed&q=146%20W%20200%20S%20Kamas%2C%20UT%2084036", target="_blank">view on google maps</a>
-          </p>
-      </section>
-    </article>
+    </section>
+  </article>
 
-    <article class="right-side">
-      <%= image_tag "avalanche.jpg" %>
-      <section>
-        <h1>The Avalanche</h1>
-        <p>You're looking at the Peach Cobbler
-          Avalanche... vanilla ice cream, Georgia Peach shaved ice, smothered in
-          heavy cream. Two words:
-          <em>brain freeze</em>.
-        </p>
-      </section>
-    </article>
+  <article class="right-side">
+    <%= image_tag "avalanche.jpg" %>
+    <section>
+      <h1>The Avalanche</h1>
+      <p>You're looking at the Peach Cobbler
+        Avalanche.  Two words: <em>brain freeze</em>.
+      </p>
+    </section>
+  </article>
 
-    <article class="left-side">
-      <%= image_tag "snow_artists.jpg" %>
-      <section>
-        <h1>Snow Artists</h1>
-        <p>You may see an empty foam cup and a block of ice.  We see a sweet
-          frozen masterpiece waiting to happen.  We love working at Kamas Snow!
-          It's the coolest summer job in town.
-        </p>
-      </section>
-    </article>
+  <article class="left-side">
+    <%= image_tag "snow_artists.jpg" %>
+    <section>
+      <h1>Snow Artists</h1>
+      <p>You may see an empty foam cup and a block of ice. We see a sweet frozen masterpiece waiting to happen.</p>
+      <p>We love working at Kamas Snow! It's the coolest summer job in town.</p>
+      <p><%= link_to "Submit an application", application_path %></p>
+    </section>
+  </article>
 
-    <article class="right-side last-article">
-      <%= image_tag "kamas_royalty_2014.jpg" %>
-      <section>
-        <h1>Your Royal Highness...</h1>
-        <p> The Kamas Fiesta Days royalty cooled off with shaved ice. Thanks for
-          stopping by... Aly, Hailey, and Brianna.
-        </p>
-      </section>
-    </article>
-  </div>
+  <article class="right-side last-article">
+    <%= image_tag "kamas_royalty_2014.jpg" %>
+    <section>
+      <h1>Your Royal Highness...</h1>
+      <p> The Kamas Fiesta Days royalty cooled off with shaved ice. Thanks for
+        stopping by... Aly, Hailey, and Brianna.
+      </p>
+    </section>
+  </article>
 
-  <footer>
-    <span class="left">&copy;2014 Kamas Snow</span>
-  </footer>
+</div>
