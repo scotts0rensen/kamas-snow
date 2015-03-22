@@ -6,48 +6,11 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
-
-  <script>
-    (function() {
-      // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-      if (!String.prototype.trim) {
-        (function() {
-          // Make sure we trim BOM and NBSP
-          var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-          String.prototype.trim = function() {
-            return this.replace(rtrim, '');
-          };
-        })();
-      }
-
-      [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
-        // in case the input is already filled..
-        if( inputEl.value.trim() !== '' ) {
-          classie.add( inputEl.parentNode, 'input--filled' );
-        }
-
-        // events:
-        inputEl.addEventListener( 'focus', onInputFocus );
-        inputEl.addEventListener( 'blur', onInputBlur );
-      } );
-
-      function onInputFocus( ev ) {
-        classie.add( ev.target.parentNode, 'input--filled' );
-      }
-
-      function onInputBlur( ev ) {
-        if( ev.target.value.trim() === '' ) {
-          classie.remove( ev.target.parentNode, 'input--filled' );
-        }
-      }
-    })();
-  </script>
-
 </head>
+
 <body>
   <header>
-    <%= image_tag "logo.png", id:"logo", alt:"Kamas Snow", width:"200px",
-      height:"117px" %>
+    <%= link_to image_tag("logo.png", id:"logo", alt:"Kamas Snow", width:"200px", height:"117px"), root_path %>
     <div id="logo-text">SHAVED ICE</div>
     <nav>
       <ul class="right">
