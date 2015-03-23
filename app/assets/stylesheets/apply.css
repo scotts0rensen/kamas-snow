@@ -1,8 +1,86 @@
-.application input {
-  margin-bottom: 12px;
-  color: #FFFFFF;
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
-.application .input {
+.application section {
+  margin-top: 20px;
+}
+
+.application .data {
+  margin-top: 10px;
+}
+
+.application .data label {
+  display: block;
+  float: left;
+  width: 130px;
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 7px;
+  font-size: .8em;
+}
+
+.application input, .application textarea, .application select {
+  font-size: .8em;
+  padding: 5px 10px;
+}
+
+.application select {
+  margin: 5px;
+}
+
+.application textarea {
+  border: 1px solid rgb(218, 218, 218);
+}
+
+.application h2 {
+  padding: 25px 0;
+  font-size: .9em;
+  font-weight: bold;
+}
+
+.application .data-row {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.application h3 {
+  display: inline-block;
+  padding-top: 7px;
+  padding-right: 20px;
+  font-size: .8em;
+}
+
+.application .data-row label {
+  padding-right: 2px;
+  padding-top: 7px;
+  font-size: .8em;
+}
+
+.application .data-row input, .application .data-row select {
   margin-left: 0;
+  margin-right: 10px;
+}
+
+.application .data-long-label {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.application .data-long-label label {
+  display: block;
+  padding-top: 7px;
+  padding-bottom: 18px;
+  font-size: .8em;
+}
+
+.application input[type=submit] {
+  margin: 50px 30px;
+  padding: 20px;
+  background-color: #1677c4;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
 }

@@ -1,55 +1,112 @@
-<div class="main">
+<div class="main application">
   <article>
     <h1>Employee Application</h1>
-    <section class="application">
-      <span class="input input--manami">
-        <input class="input__field input__field--manami" type="text" id="name" />
-        <label class="input__label input__label--manami" for="name">
-          <span class="input__label-content input__label-content--manami">Name</span>
-        </label>
-      </span>
-      <span class="input input--manami">
-        <input class="input__field input__field--manami" type="text" id="address" />
-        <label class="input__label input__label--manami" for="address">
-          <span class="input__label-content input__label-content--manami">Street address and city</span>
-        </label>
-      </span>
-    </section>
+    <%= form_tag "abc" do %>
+
+      <section>
+        <h2>Personal</h2>
+        <div class="data">
+          <%= label_tag "name", "Name" %>
+          <%= text_field_tag "name", "", size: 30 %>
+        </div>
+        <div class="data">
+          <%= label_tag "email", "Email" %>
+          <%= text_field_tag "email", "", size: 30 %>
+        </div>
+        <div class="data">
+          <%= label_tag "address", "Address" %>
+          <%= text_area_tag "address", "", size:"30x3" %>
+        </div>
+        <div class="data">
+          <%= label_tag "home", "Home Phone" %>
+          <%= phone_field_tag "home", "", size: 15 %>
+        </div>
+        <div class="data">
+          <%= label_tag "cell", "Cell Phone" %>
+          <%= phone_field_tag "cell", "", size: 15 %>
+        </div>
+      </section>
+
+      <section>
+        <h2>Availability</h2>
+        <div class="data-row">
+          <h3>How many hours are you wanting to work?</h3>
+          <%= label_tag "hours_daily", "Daily" %>
+          <%= text_field_tag "hours_daily", "", size: 3 %>
+          <%= label_tag "hours_weekly", "Weekly" %>
+          <%= text_field_tag "hours_weekly", "", size: 3 %>
+        </div>
+        <div class="data-row">
+          <%= label_tag "saturdays", "Are you willing to work Saturdays?" %>
+          <%= select_tag "saturdays", options_for_select([ "", "Yes", "No" ]) %>
+        </div>
+        <div class="data-row">
+          <%= label_tag "holidays", "Are you willing to work holidays?" %>
+          <%= select_tag "holidays", options_for_select([ "", "Yes", "No" ]) %>
+        </div>
+        <div class="data-row">
+          <%= label_tag "communicate", "How are you able to communicate?" %>
+          <%= select_tag "communicate", options_for_select([ "", "Email", "Text", "Both" ]) %>
+        </div>
+        <div class="data-row">
+          <%= label_tag "other_job", "Will this be your only job?" %>
+          <%= select_tag "other_job", options_for_select([ "", "Yes", "No" ]) %>
+        </div>
+        <div class="data-row">
+          <%= label_tag "close", "Are you able to close by yourself at night?" %>
+          <%= select_tag "close", options_for_select([ "", "Yes", "No" ]) %>
+        </div>
+        <div class="data-row">
+          <%= label_tag "transportation", "Will you have transportation to deliver items after closing?" %>
+          <%= select_tag "transportation", options_for_select([ "", "Yes", "No" ]) %>
+        </div>
+        <div class="data-row">
+          <%= label_tag "other_job", "Will this be your only job?" %>
+          <%= select_tag "other_job", options_for_select([ "", "Yes", "No" ]) %>
+        </div>
+        <div class="data-long-label">
+          <%= label_tag "activities", "List other summer activities (sports, camps, scouts, church, vacations, etc.)" %>
+          <%= text_area_tag "activities", "", size:"60x7" %>
+        </div>
+      </section>
+
+      <section>
+        <h2>Work Experience</h2>
+        <div class="data-row">
+          <%= label_tag "first_job", "Is this your first job?" %>
+          <%= select_tag "first_job", options_for_select([ "", "Yes", "No" ]) %>
+        </div>
+        <div class="data-row">
+          <h3>If no, continue with the following.</h3>
+        </div>
+        <div class="data">
+          <%= label_tag "experience_employer", "Employer" %>
+          <%= text_field_tag "employer", "", size: 30 %>
+        </div>
+        <div class="data">
+          <%= label_tag "experience_from", "From" %>
+          <%= date_field_tag "experience_from" %>
+        </div>
+        <div class="data">
+          <%= label_tag "experience_to", "To" %>
+          <%= date_field_tag "experience_to" %>
+        </div>
+        <div class="data-long-label">
+          <%= label_tag "previous_description", "Title | job duties | reason for leaving" %>
+          <%= text_area_tag "previous_description", "", size:"60x7" %>
+        </div>
+      </section>
+
+      <section>
+        <h2>One more thing....</h2>
+        <div class="data-long-label">
+          <h3>What makes you tick?  What are your likes, interests and hobbies?</h3>
+          <%= label_tag "Why would you be awesome at Kamas Snow?" %>
+          <%= text_area_tag "interests", "", size:"60x7" %>
+        </div>
+      </section>
+
+      <%= submit_tag "Submit" %>
+    <% end %>
   </article>
 </div>
-
-<script>
-  (function() {
-    // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-    if (!String.prototype.trim) {
-      (function() {
-        // Make sure we trim BOM and NBSP
-        var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-        String.prototype.trim = function() {
-          return this.replace(rtrim, '');
-        };
-      })();
-    }
-
-    [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
-      // in case the input is already filled..
-      if( inputEl.value.trim() !== '' ) {
-        classie.add( inputEl.parentNode, 'input--filled' );
-      }
-
-      // events:
-      inputEl.addEventListener( 'focus', onInputFocus );
-      inputEl.addEventListener( 'blur', onInputBlur );
-    } );
-
-    function onInputFocus( ev ) {
-      classie.add( ev.target.parentNode, 'input--filled' );
-    }
-
-    function onInputBlur( ev ) {
-      if( ev.target.value.trim() === '' ) {
-        classie.remove( ev.target.parentNode, 'input--filled' );
-      }
-    }
-  })();
-</script>
