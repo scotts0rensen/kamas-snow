@@ -84,3 +84,11 @@ input {
   border-radius: 10px;
   cursor: pointer;
 }
+
+.padding-bottom {
+  padding-bottom: 20px;
+}
+
+.padding-top {
+  padding-top: 20px;
+}

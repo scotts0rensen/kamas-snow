@@ -1,7 +1,7 @@
 <div class="main application">
   <article>
     <h1>Employee Application</h1>
-    <%= form_tag "abc" do %>
+    <%= form_tag "submit" do %>
 
       <section>
         <h2>Personal</h2>
@@ -29,6 +29,14 @@
 
       <section>
         <h2>Availability</h2>
+        <div class="data-row">
+          <%= label_tag "months", "Are you available to work the following months (May, Jun, July, Aug, Sept)?" %>
+          <%= select_tag "months", options_for_select([ "", "Yes", "No" ]) %>
+        </div>
+        <div class="data-long-label">
+          <%= label_tag "months_exceptions", "Exceptions" %>
+          <%= text_area_tag "months_exceptions", "", size:"60x7" %>
+        </div>
         <div class="data-row">
           <h3>How many hours are you wanting to work?</h3>
           <%= label_tag "hours_daily", "Daily" %>
@@ -65,7 +73,7 @@
           <%= select_tag "other_job", options_for_select([ "", "Yes", "No" ]) %>
         </div>
         <div class="data-long-label">
-          <%= label_tag "activities", "List other summer activities (sports, camps, scouts, church, vacations, etc.)" %>
+          <%= label_tag "activities", "What summer activities will you be involved in? (sports, camps, scouts, vacations, etc.)" %>
           <%= text_area_tag "activities", "", size:"60x7" %>
         </div>
       </section>
@@ -77,7 +85,7 @@
           <%= select_tag "first_job", options_for_select([ "", "Yes", "No" ]) %>
         </div>
         <div class="data-row">
-          <h3>If no, continue with the following.</h3>
+          <h3 class="padding-bottom">If no, continue with the following.</h3>
         </div>
         <div class="data">
           <%= label_tag "experience_employer", "Employer" %>
@@ -91,7 +99,7 @@
           <%= label_tag "experience_to", "To" %>
           <%= date_field_tag "experience_to" %>
         </div>
-        <div class="data-long-label">
+        <div class="data-long-label padding-top">
           <%= label_tag "previous_description", "Title | job duties | reason for leaving" %>
           <%= text_area_tag "previous_description", "", size:"60x7" %>
         </div>
@@ -101,7 +109,7 @@
         <h2>One more thing....</h2>
         <div class="data-long-label">
           <h3>What makes you tick?  What are your likes, interests and hobbies?</h3>
-          <%= label_tag "Why would you be awesome at Kamas Snow?" %>
+          <%= label_tag "interest", "Why would you be awesome at Kamas Snow?" %>
           <%= text_area_tag "interests", "", size:"60x7" %>
         </div>
       </section>
