@@ -9,4 +9,8 @@ class WelcomeController < ApplicationController
 
   def confirm
   end
+
+  def mailer_params
+    params.except(:utf8).except(:authenticity_token).except(:commit).except(:action).except(:controller)
+  end
 end
