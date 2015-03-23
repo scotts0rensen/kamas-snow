@@ -3,6 +3,7 @@ class WelcomeController < ApplicationController
   end
 
   def submit
+    ApplicationMailer.submit(params).deliver
     redirect_to confirm_path
   end
 
