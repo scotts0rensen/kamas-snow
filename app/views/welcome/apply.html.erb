@@ -85,19 +85,15 @@
           <%= select_tag "first_job", options_for_select([ "", "Yes", "No" ]) %>
         </div>
         <div class="data-row">
-          <h3 class="padding-bottom">If no, continue with the following.</h3>
+          <h3 class="padding-bottom">If no, tell us about your most recent experience.</h3>
         </div>
-        <div class="data">
+        <div class="data-row">
           <%= label_tag "experience_employer", "Employer" %>
-          <%= text_field_tag "employer", "", size: 30 %>
-        </div>
-        <div class="data">
+          <%= text_field_tag "employer", "", size: 20 %>
           <%= label_tag "experience_from", "From" %>
-          <%= date_field_tag "experience_from" %>
-        </div>
-        <div class="data">
+          <%= text_field_tag "experience_from", "", size: 10 %>
           <%= label_tag "experience_to", "To" %>
-          <%= date_field_tag "experience_to" %>
+          <%= text_field_tag "experience_to", "", size: 10 %>
         </div>
         <div class="data-long-label padding-top">
           <%= label_tag "experience_description", "Title | job duties | reason for leaving" %>
