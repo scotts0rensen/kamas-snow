@@ -10,15 +10,109 @@
     <table>
       <tr>
         <td><strong>Name:</strong></td>
-        <td><%=params[:name]%></td>
+        <td><%=@params[:name]%></td>
       </tr>
       <tr>
         <td><strong>Email:</strong></td>
-        <td><%=params[:email]%></td>
+        <td><%=@params[:email]%></td>
+      </tr>
+      <tr>
+        <td><strong>Address:</strong></td>
+        <td><%=@params[:address]%></td>
+      </tr>
+      <tr>
+        <td><strong>Home Phone:</strong></td>
+        <td><%=@params[:home]%></td>
+      </tr>
+      <tr>
+        <td><strong>Cell Phone:</strong></td>
+        <td><%=@params[:cell]%></td>
+      </tr>
+      <tr>
+        <td><strong>Age:</strong></td>
+        <td><%=@params[:age]%></td>
       </tr>
     </table>
-    <% @params.each do |key, value| %>
-      <p><%= "#{key}: #{value}" %></p>
-    <% end %>
+
+    <h2>Availability</h2>
+    <table>
+      <tr>
+        <td><strong>Available all months?</strong></td>
+        <td><%=@params[:months]%></td>
+      </tr>
+      <tr>
+        <td><strong>Unavailable to work:</strong></td>
+        <td><%=@params[:months_exception]%></td>
+      </tr>
+      <tr>
+        <td><strong>Daily hours:</strong></td>
+        <td><%=@params[:hours_daily]%></td>
+      </tr>
+      <tr>
+        <td><strong>Weekly hours:</strong></td>
+        <td><%=@params[:hours_weekly]%></td>
+      </tr>
+      <tr>
+        <td><strong>Saturdays?</strong></td>
+        <td><%=@params[:saturdays]%></td>
+      </tr>
+      <tr>
+        <td><strong>Holidays?</strong></td>
+        <td><%=@params[:holidays]%></td>
+      </tr>
+      <tr>
+        <td><strong>Communication:</strong></td>
+        <td><%=@params[:communicate]%></td>
+      </tr>
+      <tr>
+        <td><strong>Close by yourself?</strong></td>
+        <td><%=@params[:close]%></td>
+      </tr>
+      <tr>
+        <td><strong>Transporation after closing?</strong></td>
+        <td><%=@params[:transportation]%></td>
+      </tr>
+      <tr>
+        <td><strong>Only job?</strong></td>
+        <td><%=@params[:only_job]%></td>
+      </tr>
+      <tr>
+        <td><strong>Other summer activities:</strong></td>
+        <td><%=@params[:activities]%></td>
+      </tr>
+    </table>
+
+    <h2>Work Experience</h2>
+    <table>
+      <tr>
+        <td><strong>First job?</strong></td>
+        <td><%=@params[:first_job]%></td>
+      </tr>
+      <tr>
+        <td><strong>Previous employer:</strong></td>
+        <td><%=@params[:employer]%></td>
+      </tr>
+      <tr>
+        <td><strong>From:</strong></td>
+        <td><%=@params[:experience_from]%></td>
+      </tr>
+      <tr>
+        <td><strong>To:</strong></td>
+        <td><%=@params[:experience_to]%></td>
+      </tr>
+      <tr>
+        <td><strong>Job description:</strong></td>
+        <td><%=@params[:experience_to]%></td>
+      </tr>
+    </table>
+
+    <h2>Other</h2>
+    <table>
+      <tr>
+        <td><strong>Personal profile:</strong></td>
+        <td><%=@params[:personal_profile]%></td>
+      </tr>
+    </table>
+
   </body>
 </html>

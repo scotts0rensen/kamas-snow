@@ -58,7 +58,7 @@
         </div>
         <div class="data-row">
           <%= label_tag "communicate", "How are you able to communicate?" %>
-          <%= select_tag "communicate", options_for_select([ "", "Email", "Text", "Both" ]) %>
+          <%= select_tag "communicate", options_for_select([ "", "Email", "Text", "Email and Text", "Neither" ]) %>
         </div>
         <div class="data-row">
           <%= label_tag "close", "Are you able to close by yourself at night?" %>
@@ -69,8 +69,8 @@
           <%= select_tag "transportation", options_for_select([ "", "Yes", "No" ]) %>
         </div>
         <div class="data-row">
-          <%= label_tag "other_job", "Will this be your only job?" %>
-          <%= select_tag "other_job", options_for_select([ "", "Yes", "No" ]) %>
+          <%= label_tag "only_job", "Will this be your only job?" %>
+          <%= select_tag "only_job", options_for_select([ "", "Yes", "No" ]) %>
         </div>
         <div class="data-long-label">
           <%= label_tag "activities", "What summer activities will you be involved in? (sports, scouts, band, dance, vacations, etc.)" %>
@@ -105,8 +105,8 @@
         <h2>One more thing....</h2>
         <div class="data-long-label">
           <h3>What makes you tick?  What are your likes, interests and hobbies?</h3>
-          <%= label_tag "interest", "Why would you be awesome at Kamas Snow?" %>
-          <%= text_area_tag "interests", "", size:"60x7" %>
+          <%= label_tag "personal_profile", "Why would you be awesome at Kamas Snow?" %>
+          <%= text_area_tag "personal_profile", "", size:"60x7" %>
         </div>
       </section>
 
