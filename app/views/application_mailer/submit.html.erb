@@ -6,6 +6,17 @@
   <body>
     <h1>Application for <%= @params[:name] %></h1>
 
+    <h2>Personal</h2>
+    <table>
+      <tr>
+        <td><strong>Name:</strong></td>
+        <td><%=params[:name]%></td>
+      </tr>
+      <tr>
+        <td><strong>Email:</strong></td>
+        <td><%=params[:email]%></td>
+      </tr>
+    </table>
     <% @params.each do |key, value| %>
       <p><%= "#{key}: #{value}" %></p>
     <% end %>
