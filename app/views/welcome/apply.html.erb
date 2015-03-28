@@ -88,7 +88,7 @@
           <h3 class="padding-bottom">If no, tell us about your most recent experience.</h3>
         </div>
         <div class="data-row">
-          <%= label_tag "experience_employer", "Employer" %>
+          <%= label_tag "employer", "Employer" %>
           <%= text_field_tag "employer", "", size: 20 %>
           <%= label_tag "experience_from", "From" %>
           <%= text_field_tag "experience_from", "", size: 10 %>
@@ -98,6 +98,29 @@
         <div class="data-long-label padding-top">
           <%= label_tag "experience_description", "Title | job duties | reason for leaving" %>
           <%= text_area_tag "experience_description", "", size:"60x10" %>
+        </div>
+      </section>
+
+      <section>
+        <h2>References</h2>
+        <h3>Please list a few references (other than family).</h3>
+        <div class="data-row">
+          <%= label_tag "reference1_name", "Name" %>
+          <%= text_field_tag "reference1_name", "", size: 25 %>
+          <%= label_tag "reference1_phone", "Phone Number" %>
+          <%= text_field_tag "reference1_phone", "", size: 13 %>
+        </div>
+        <div class="data-row">
+          <%= label_tag "reference2_name", "Name" %>
+          <%= text_field_tag "reference2_name", "", size: 25 %>
+          <%= label_tag "reference2_phone", "Phone Number" %>
+          <%= text_field_tag "reference2_phone", "", size: 13 %>
+        </div>
+        <div class="data-row">
+          <%= label_tag "reference3_name", "Name" %>
+          <%= text_field_tag "reference3_name", "", size: 25 %>
+          <%= label_tag "reference3_phone", "Phone Number" %>
+          <%= text_field_tag "reference3_phone", "", size: 13 %>
         </div>
       </section>
 
