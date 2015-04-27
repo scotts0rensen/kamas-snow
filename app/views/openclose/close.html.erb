@@ -1,0 +1,56 @@
+<div class="openclose">
+<h1>Close</h1>
+<h2>Do not close if customers are waiting</h2>
+
+<%= form_tag "submit_open" do %>
+
+<ul>
+  <li><%= check_box_tag "close_awnings" %>Close awnings</li>
+  <li>Outside
+    <ul>
+      <li><%= check_box_tag "outside_trash" %>Pick up outside</li>
+      <li><%= check_box_tag "tables" %>Clean tables and benches</li>
+      <li><%= check_box_tag "close_umbrellas" %>Close umbrellas</li>
+      <li><%= check_box_tag "trailer_sides" %>Wipe down sides of trailer</li>
+      <li><%= check_box_tag "gray_water" %>Empty gray water</li>
+      <li><%= check_box_tag "street" %>Empty water bucket in front of trailer and brush street</li>
+      <li><%= check_box_tag "trash_cans" %>Empty both trash cans</li>
+    </ul>
+  </li>
+  <li>Inside
+    <ul>
+      <li>Cash Box
+        <ul>
+          <li>Count $100 to leave in cash box (make change if neccessary)
+            <ul>
+              <li>Quarters (20)<%= number_field_tag "quarters" %></li>
+              <li>$1 (25)<%= number_field_tag "ones" %></li>
+              <li>$5 (14)<%= number_field_tag "fives" %></li>
+              <li>$10<%= number_field_tag "tens" %></li>
+              <li>$20<%= number_field_tag "twenties" %></li>
+            </ul>
+          </li>
+          <li><%= check_box_tag "envelope" %>Put excess money and punch cards in blue envelope</li>
+          <li><%= check_box_tag "hide_cash_box" %>Lock cash box and put behind garbage can</li>
+        </ul>
+      </li>
+      <li>Inventory</li>
+      <li><%= check_box_tag "fill_paper" %>Fill napkins, straws, and spoons</li>
+      <li><%= check_box_tag "fill_flavors" %>Fill empty flavors</li>
+      <li><%= check_box_tag "sugar_water" %>Make sugar water</li>
+      <li><%= check_box_tag "counters" %>Wipe down counters and shelves (sani-water)</li>
+      <li><%= check_box_tag "wipe-shaver" %>Remove ice from shaver and wipe it down</li>
+      <li><%= check_box_tag "empty_sani" %>Empty sanitized water</li>
+      <li><%= check_box_tag "floor" %>Mop floor</li>
+      <li><%= check_box_tag "dirty_rags" %>Put dirty rags in green basket</li>
+      <li><%= check_box_tag "pump_off" %>Turn off water pump</li>
+    </ul>
+  </li>
+  <li><%= check_box_tag "garbage_in" %>Put garbage can inside</li>
+  <li><%= check_box_tag "water_off" %>Turn off water and lock rear door</li>
+  <li><%= check_box_tag "lock_freezer" %>Lock ice freezer and shed</li>
+  <li><%= check_box_tag "clock_out" %>Clock out</li>
+  <li><%= check_box_tag "hide_ipad" %>Put ipad under counter (leave plugged in)</li>
+</ul>
+<% end %>
+</div>

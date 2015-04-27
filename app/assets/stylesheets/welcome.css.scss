@@ -62,7 +62,7 @@ table {
   src: url('6911542873.ttf') format('truetype');
 }
 
-html {
+html.outside {
   background: url("background_snow.jpeg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
