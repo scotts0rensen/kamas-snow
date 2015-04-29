@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>KamasSnow</title>
+  <title>Kamas Snow - Opening Checklist</title>
   <%= stylesheet_link_tag    "openclose", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -91,6 +91,11 @@
     Fill flavors
   </li>
   <li>
+    <%= radio_button_tag "fill_scm", "done" %>
+    <%= radio_button_tag "fill_scm", "na" %>
+    Fill SCM and Heavy Cream
+  </li>
+  <li>
     <%= radio_button_tag "sugar_water", "done" %>
     <%= radio_button_tag "sugar_water", "na" %>
     Make sugar water
@@ -99,6 +104,10 @@
     <%= radio_button_tag "counters", "done" %>
     <%= radio_button_tag "counters", "na" %>
     Wipe down counters and shelves
+  </li>
+  <li>
+    <%= check_box_tag "inventory" %>
+    <span>Inventory</span>
   </li>
 </ul>
 
@@ -113,7 +122,7 @@
   <li>
     <%= radio_button_tag "outside_trash", "done" %>
     <%= radio_button_tag "outside_trash", "na" %>
-    Pick up garbage
+    Pick up garbage outside
   </li>
   <li>
     <%= check_box_tag "open_umbrellas" %>
@@ -128,11 +137,6 @@
     <%= radio_button_tag "trailer_sides", "done" %>
     <%= radio_button_tag "trailer_sides", "na" %>
     Wipe down sides of trailer
-  </li>
-  <li>
-    <%= radio_button_tag "window", "done" %>
-    <%= radio_button_tag "window", "na" %>
-    Wash window
   </li>
   <li>
     <%= radio_button_tag "gray_water", "done" %>

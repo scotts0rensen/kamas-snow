@@ -271,43 +271,48 @@
     <span class="indent4">Opened</span>
   </div>
   <li>
+    <%= number_field_tag "unopened-sugar", nil, min: 0, class: "count", "data-amount"=>"20" %>
+    <%= select_tag "opened-sugar", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
+    Sugar
+  </li>
+  <li>
     <%= number_field_tag "unopened-spoons", nil, min: 0, class: "count", "data-amount"=>"20" %>
     <%= select_tag "opened-spoons", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
     Spoons
   </li>
   <li>
-    <%= number_field_tag "unopened-spoons", nil, min: 0, class: "count", "data-amount"=>"20" %>
-    <%= select_tag "opened-spoons", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
+    <%= number_field_tag "unopened-straws", nil, min: 0, class: "count", "data-amount"=>"20" %>
+    <%= select_tag "opened-straws", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
     Straws
   </li>
   <li>
-    <%= number_field_tag "unopened-spoons", nil, min: 0, class: "count", "data-amount"=>"20" %>
-    <%= select_tag "opened-spoons", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
+    <%= number_field_tag "unopened-napkins", nil, min: 0, class: "count", "data-amount"=>"20" %>
+    <%= select_tag "opened-napkins", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
     Napkins
   </li>
   <li>
-    <%= number_field_tag "unopened-spoons", nil, min: 0, class: "count", "data-amount"=>"20" %>
-    <%= select_tag "opened-spoons", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
+    <%= number_field_tag "unopened-icecream", nil, min: 0, class: "count", "data-amount"=>"20" %>
+    <%= select_tag "opened-icecream", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
     Ice Cream
   </li>
   <li>
-    <%= number_field_tag "unopened-spoons", nil, min: 0, class: "count", "data-amount"=>"20" %>
-    <%= select_tag "opened-spoons", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
+    <%= number_field_tag "unopened-scm", nil, min: 0, class: "count", "data-amount"=>"20" %>
+    <%= select_tag "opened-scm", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
     Sweetened Condensed Milk
   </li>
   <li>
-    <%= number_field_tag "unopened-spoons", nil, min: 0, class: "count", "data-amount"=>"20" %>
-    <%= select_tag "opened-spoons", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
+    <%= number_field_tag "unopened-em", nil, min: 0, class: "count", "data-amount"=>"20" %>
+    <%= select_tag "opened-em", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
     Evaporated Milk
   </li>
   <li>
-    <%= number_field_tag "unopened-spoons", nil, min: 0, class: "count", "data-amount"=>"20" %>
-    <%= select_tag "opened-spoons", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
+    <%= number_field_tag "unopened-hc", nil, min: 0, class: "count", "data-amount"=>"20" %>
+    <%= select_tag "opened-hc", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
     Heavy Cream
   </li>
   <li>
-    <%= number_field_tag "unopened-spoons", nil, min: 0, class: "count", "data-amount"=>"20" %>
-    <%= select_tag "opened-spoons", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
+    <%= number_field_tag "unopened-poprocks", nil, min: 0, class: "count", "data-amount"=>"20" %>
+    <%= select_tag "opened-poprocks", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
     Pop Rocks
   </li>
 
