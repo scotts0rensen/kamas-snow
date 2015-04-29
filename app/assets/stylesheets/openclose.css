@@ -149,3 +149,14 @@ input[type=checkbox], input[type=radio] {
 .strong {
   font-weight: bold;
 }
+
+.openclose input[type=submit] {
+  margin: 10px 0;
+  padding: 20px;
+  background-color: #1677c4;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: .8em;
+}
+

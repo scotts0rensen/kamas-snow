@@ -53,7 +53,7 @@
 
 <hr/>
 
-<h2>Concentrates</h2>
+<h2>Flavor Concentrates</h2>
 <div class="table flavors-table">
   <div class="header row">
     <div class="cell row-header"><h3 class="flavor-color">Reds</h3></div>
@@ -310,7 +310,7 @@
     <div class="cell"><%= select_tag "opened-hc", options_for_select(["", "2 bottles", "1 1/2 bottles", "1 bottle", "1/2 bottle", "Empty"]) %></div>
   </div>
   <div class="row">
-    <div class="cell row-header">Sweetened Condensed Milk</div>
+    <div class="cell row-header">SCM</div>
     <div class="cell"><%= number_field_tag "unopened-scm", nil, min: 0, class: "count", "data-amount"=>"20" %></div>
     <div class="cell"><%= select_tag "opened-scm", options_for_select(["", "2 bottles", "1 1/2 bottles", "1 bottle", "1/2 bottle", "Empty"]) %></div>
   </div>
@@ -327,6 +327,8 @@
     <div class="cell"><%= select_tag "unopened-poprocks", options_for_select(["", "More than 20", "Less than 20"]) %></div>
   </div>
 </div>
+
+<%= submit_tag "Submit" %>
 
 <% end %>
 </div>
