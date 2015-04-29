@@ -19,12 +19,12 @@ $ ->
       total_ele.val("$" + tot.toString())
 
   $(".count-cups input[type=number]").change (event) ->
-    li_ele = $(this).closest("li")
-    total_ele = li_ele.find(".total")
-    count_ele = li_ele.find(".count")
-    $(total_ele).val("0")
-    count_ele.each (index, ele) ->
-      sub = parseInt($(ele).val() || 0) * parseInt($(ele).data("amount"))
-      tot = parseInt(total_ele.val())
-      tot = tot + sub
-      total_ele.val(tot.toString())
+    row = $(this).closest(".row")
+    total = row.find(".total")
+    $(total).val("0")
+    counts = row.find(".count")
+    counts.each (index, count) ->
+      sub = parseInt($(count).val() || 0) * parseInt($(count).data("amount"))
+      tot = parseInt(total.val()) + sub
+      total.val(tot.toString())
+

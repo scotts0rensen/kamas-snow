@@ -28,6 +28,35 @@
   color: gray;
 }
 
+.openclose .table {
+  display: table;
+}
+
+.openclose .row {
+  display: table-row;
+}
+
+.openclose .row-header {
+  padding-right: 20px;
+}
+
+.openclose .cell {
+  display: table-cell;
+}
+
+.openclose .flavors-table {
+  margin-top: 20px;
+}
+
+.openclose .flavors-table h3 {
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.openclose .flavor-color {
+  color: black;
+}
+
 .openclose .indent-radio-na {
   padding-left: 12px;
 }
