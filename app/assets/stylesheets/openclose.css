@@ -10,7 +10,7 @@
 
 .openclose h2 {
   font-size: 22px;
-  margin: 10px 0;
+  margin: 20px 0 10px 0;
 }
 
 .openclose h3 {
@@ -37,6 +37,7 @@
 }
 
 .openclose .row-header {
+  width: 140px;
   padding-right: 20px;
 }
 
@@ -57,50 +58,6 @@
   color: black;
 }
 
-.openclose .indent-radio-na {
-  padding-left: 12px;
-}
-
-.openclose .indent-radio-full {
-  padding-left: 3px;
-}
-
-.openclose .indent-radio-3-4 {
-  padding-left: 16px;
-}
-
-.openclose .indent-radio-1-2 {
-  padding-left: 19px;
-}
-
-.openclose .indent-radio-1-4 {
-  padding-left: 19px;
-}
-
-.openclose .indent-radio-empty {
-  padding-left: 13px;
-}
-
-.openclose .indent2 {
-  padding-left: 62px;
-}
-
-.openclose .indent3 {
-  padding-left: 60px;
-}
-
-.openclose .indent4 {
-  padding-left: 46px;
-}
-
-.openclose .indent5 {
-  padding-left: 102px;
-}
-
-.openclose .indent6 {
-  padding-left: 40px;
-}
-
 .openclose ul {
   margin-top: 0;
   padding-left: 0
@@ -110,9 +67,8 @@
   list-style-type: none;
 }
 
-.openclose label {
-  font-size: smaller;
-  color: gray;
+.openclose .indent-radio-na {
+  padding-left: 12px;
 }
 
 .openclose input[type=checkbox] ~ span {
@@ -151,7 +107,7 @@ input[type=checkbox], input[type=radio] {
 }
 
 .openclose input[type=submit] {
-  margin: 10px 0;
+  margin: 20px 0;
   padding: 20px;
   background-color: #1677c4;
   color: white;
