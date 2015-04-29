@@ -6,4 +6,8 @@ class OpencloseController < ApplicationController
   def close
     render 'close', :layout => false
   end
+
+  def inventory
+    render 'inventory', :layout => false
+  end
 end

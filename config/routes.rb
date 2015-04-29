@@ -7,4 +7,5 @@ KamasSnow::Application.routes.draw do
 
   get 'open' => 'openclose#open'
   get 'close' => 'openclose#close'
+  get 'inventory' => 'openclose#inventory'
 end

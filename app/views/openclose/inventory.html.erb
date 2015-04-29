@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KamasSnow</title>
+  <%= stylesheet_link_tag    "openclose", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+
+<div class="openclose">
+<h1>INVENTORY</h1>
+
+<hr/>
+
+<%= form_tag "submit_inventory" do %>
+
+<h2>Cups</h2>
+<ul class="count-cups">
+  <div class="header">
+    <span>Sleeves</span>
+    <span class="indent2">Loose</span>
+    <span class="indent3">Total</span>
+  </div>
+  <li>
+    <%= number_field_tag "snowball-sleeves", nil, min: 0, class: "count", "data-amount"=>"20" %>
+    <%= number_field_tag "snowball-loose", nil, min: 0, class: "count", "data-amount"=>"1" %>
+    <%= text_field_tag "snowball-total", nil, class: "total", disabled: true %>
+    Snow Ball
+  </li>
+  <li>
+    <%= number_field_tag "mountain-sleeves", nil, min: 0, class: "count", "data-amount"=>"20" %>
+    <%= number_field_tag "mountain-loose", nil, min: 0, class: "count", "data-amount"=>"1" %>
+    <%= text_field_tag "mountain-total", nil, class: "total", disabled: true %>
+    Mountain
+  </li>
+  <li>
+    <%= number_field_tag "glacier-sleeves", nil, min: 0, class: "count", "data-amount"=>"20" %>
+    <%= number_field_tag "glacier-loose", nil, min: 0, class: "count", "data-amount"=>"1" %>
+    <%= text_field_tag "glacier-total", nil, class: "total", disabled: true %>
+    Glacier
+  </li>
+  <li>
+    <%= number_field_tag "avalanche-sleeves", nil, min: 0, class: "count", "data-amount"=>"20" %>
+    <%= number_field_tag "avalanche-loose", nil, min: 0, class: "count", "data-amount"=>"1" %>
+    <%= text_field_tag "avalanche-total", nil, class: "total", disabled: true %>
+    Avalanche (foam)
+  </li>
+</ul>
+
+<hr/>
+
+<h2>Concentrates</h2>
+<ul class="count-flavors">
+  <h3>Reds</h3>
+  <div class="header">
+    <span class="indent-radio-full">Full</span>
+    <span class="indent-radio-3-4">3/4</span>
+    <span class="indent-radio-1-2">1/2</span>
+    <span class="indent-radio-1-4">1/4</span>
+    <span class="indent-radio-empty">Empty</span>
+  </div>
+  <li>
+    <%= radio_button_tag "flavor-ch", "full" %>
+    <%= radio_button_tag "flabor-ch", "3-4" %>
+    <%= radio_button_tag "flabor-ch", "1-2" %>
+    <%= radio_button_tag "flabor-ch", "1-4" %>
+    <%= radio_button_tag "flabor-ch", "empty" %>
+    Cherry
+  </li>
+  <li>
+    <%= radio_button_tag "flavor-cc", "full" %>
+    <%= radio_button_tag "flabor-cc", "3-4" %>
+    <%= radio_button_tag "flabor-cc", "1-2" %>
+    <%= radio_button_tag "flabor-cc", "1-4" %>
+    <%= radio_button_tag "flabor-cc", "empty" %>
+    Cotton Candy
+  </li>
+  <li>
+    <%= radio_button_tag "flavor-tb", "full" %>
+    <%= radio_button_tag "flabor-tb", "3-4" %>
+    <%= radio_button_tag "flabor-tb", "1-2" %>
+    <%= radio_button_tag "flabor-tb", "1-4" %>
+    <%= radio_button_tag "flabor-tb", "empty" %>
+    Tigers Blood
+  </li>
+
+  <h3>Pinks</h3>
+  <div class="header">
+    <span class="indent-radio-full">Full</span>
+    <span class="indent-radio-3-4">3/4</span>
+    <span class="indent-radio-1-2">1/2</span>
+    <span class="indent-radio-1-4">1/4</span>
+    <span class="indent-radio-empty">Empty</span>
+  </div>
+  <li>
+    <%= radio_button_tag "flavor-bg", "full" %>
+    <%= radio_button_tag "flabor-bg", "3-4" %>
+    <%= radio_button_tag "flabor-bg", "1-2" %>
+    <%= radio_button_tag "flabor-bg", "1-4" %>
+    <%= radio_button_tag "flabor-bg", "empty" %>
+    Bubble Gum
+  </li>
+  <li>
+    <%= radio_button_tag "flavor-pl", "full" %>
+    <%= radio_button_tag "flabor-pl", "3-4" %>
+    <%= radio_button_tag "flabor-pl", "1-2" %>
+    <%= radio_button_tag "flabor-pl", "1-4" %>
+    <%= radio_button_tag "flabor-pl", "empty" %>
+    Pink Lemonade
+  </li>
+
+  <h3>Yellows</h3>
+  <div class="header">
+    <span class="indent-radio-full">Full</span>
+    <span class="indent-radio-3-4">3/4</span>
+    <span class="indent-radio-1-2">1/2</span>
+    <span class="indent-radio-1-4">1/4</span>
+    <span class="indent-radio-empty">Empty</span>
+  </div>
+  <li>
+    <%= radio_button_tag "flavor-ba", "full" %>
+    <%= radio_button_tag "flabor-ba", "3-4" %>
+    <%= radio_button_tag "flabor-ba", "1-2" %>
+    <%= radio_button_tag "flabor-ba", "1-4" %>
+    <%= radio_button_tag "flabor-ba", "empty" %>
+    Banana
+  </li>
+  <li>
+    <%= radio_button_tag "flavor-ic", "full" %>
+    <%= radio_button_tag "flabor-ic", "3-4" %>
+    <%= radio_button_tag "flabor-ic", "1-2" %>
+    <%= radio_button_tag "flabor-ic", "1-4" %>
+    <%= radio_button_tag "flabor-ic", "empty" %>
+    Ice Cream
+  </li>
+
+  <h3>Browns/Greens</h3>
+  <div class="header">
+    <span class="indent-radio-full">Full</span>
+    <span class="indent-radio-3-4">3/4</span>
+    <span class="indent-radio-1-2">1/2</span>
+    <span class="indent-radio-1-4">1/4</span>
+    <span class="indent-radio-empty">Empty</span>
+  </div>
+  <li>
+    <%= radio_button_tag "flavor-li", "full" %>
+    <%= radio_button_tag "flabor-li", "3-4" %>
+    <%= radio_button_tag "flabor-li", "1-2" %>
+    <%= radio_button_tag "flabor-li", "1-4" %>
+    <%= radio_button_tag "flabor-li", "empty" %>
+    Lime
+  </li>
+  <li>
+    <%= radio_button_tag "flavor-ga", "full" %>
+    <%= radio_button_tag "flabor-ga", "3-4" %>
+    <%= radio_button_tag "flabor-ga", "1-2" %>
+    <%= radio_button_tag "flabor-ga", "1-4" %>
+    <%= radio_button_tag "flabor-ga", "empty" %>
+    Green Apple
+  </li>
+  <li>
+    <%= radio_button_tag "flavor-rb", "full" %>
+    <%= radio_button_tag "flabor-rb", "3-4" %>
+    <%= radio_button_tag "flabor-rb", "1-2" %>
+    <%= radio_button_tag "flabor-rb", "1-4" %>
+    <%= radio_button_tag "flabor-rb", "empty" %>
+    Rootbeer
+  </li>
+
+  <h3>Blues</h3>
+  <div class="header">
+    <span class="indent-radio-full">Full</span>
+    <span class="indent-radio-3-4">3/4</span>
+    <span class="indent-radio-1-2">1/2</span>
+    <span class="indent-radio-1-4">1/4</span>
+    <span class="indent-radio-empty">Empty</span>
+  </div>
+  <li>
+    <%= radio_button_tag "flavor-bl", "full" %>
+    <%= radio_button_tag "flabor-bl", "3-4" %>
+    <%= radio_button_tag "flabor-bl", "1-2" %>
+    <%= radio_button_tag "flabor-bl", "1-4" %>
+    <%= radio_button_tag "flabor-bl", "empty" %>
+    Blueberry
+  </li>
+  <li>
+    <%= radio_button_tag "flavor-br", "full" %>
+    <%= radio_button_tag "flabor-br", "3-4" %>
+    <%= radio_button_tag "flabor-br", "1-2" %>
+    <%= radio_button_tag "flabor-br", "1-4" %>
+    <%= radio_button_tag "flabor-br", "empty" %>
+    Blue Raspberry
+  </li>
+  <li>
+    <%= radio_button_tag "flavor-byu", "full" %>
+    <%= radio_button_tag "flabor-byu", "3-4" %>
+    <%= radio_button_tag "flabor-byu", "1-2" %>
+    <%= radio_button_tag "flabor-byu", "1-4" %>
+    <%= radio_button_tag "flabor-byu", "empty" %>
+    BYU
+  </li>
+
+  <h3>Whites</h3>
+  <div class="header">
+    <span class="indent-radio-full">Full</span>
+    <span class="indent-radio-3-4">3/4</span>
+    <span class="indent-radio-1-2">1/2</span>
+    <span class="indent-radio-1-4">1/4</span>
+    <span class="indent-radio-empty">Empty</span>
+  </div>
+  <li>
+    <%= radio_button_tag "flavor-pc", "full" %>
+    <%= radio_button_tag "flabor-pc", "3-4" %>
+    <%= radio_button_tag "flabor-pc", "1-2" %>
+    <%= radio_button_tag "flabor-pc", "1-4" %>
+    <%= radio_button_tag "flabor-pc", "empty" %>
+    Pina Colada
+  </li>
+  <li>
+    <%= radio_button_tag "flavor-sf", "full" %>
+    <%= radio_button_tag "flabor-sf", "3-4" %>
+    <%= radio_button_tag "flabor-sf", "1-2" %>
+    <%= radio_button_tag "flabor-sf", "1-4" %>
+    <%= radio_button_tag "flabor-sf", "empty" %>
+    Silver Fox
+  </li>
+
+  <h3>Other</h3>
+  <div class="header">
+    <span class="indent-radio-full">Full</span>
+    <span class="indent-radio-3-4">3/4</span>
+    <span class="indent-radio-1-2">1/2</span>
+    <span class="indent-radio-1-4">1/4</span>
+    <span class="indent-radio-empty">Empty</span>
+  </div>
+  <li>
+    <%= radio_button_tag "flavor-sb", "full" %>
+    <%= radio_button_tag "flabor-sb", "3-4" %>
+    <%= radio_button_tag "flabor-sb", "1-2" %>
+    <%= radio_button_tag "flabor-sb", "1-4" %>
+    <%= radio_button_tag "flabor-sb", "empty" %>
+    Sodium Benzoate
+  </li>
+  <li>
+    <%= radio_button_tag "flavor-ca", "full" %>
+    <%= radio_button_tag "flabor-ca", "3-4" %>
+    <%= radio_button_tag "flabor-ca", "1-2" %>
+    <%= radio_button_tag "flabor-ca", "1-4" %>
+    <%= radio_button_tag "flabor-ca", "empty" %>
+    Citric Acid
+  </li>
+  <li>
+    <%= radio_button_tag "flavor-ss", "full" %>
+    <%= radio_button_tag "flabor-ss", "3-4" %>
+    <%= radio_button_tag "flabor-ss", "1-2" %>
+    <%= radio_button_tag "flabor-ss", "1-4" %>
+    <%= radio_button_tag "flabor-ss", "empty" %>
+    Sour Snow
+  </li>
+</ul>
+
+<hr/>
+
+<h2>Other</h2>
+<ul>
+  <div class="header">
+    <span>Unopened</span>
+    <span class="indent4">Opened</span>
+  </div>
+  <li>
+    <%= number_field_tag "unopened-spoons", nil, min: 0, class: "count", "data-amount"=>"20" %>
+    <%= select_tag "opened-spoons", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
+    Spoons
+  </li>
+  <li>
+    <%= number_field_tag "unopened-spoons", nil, min: 0, class: "count", "data-amount"=>"20" %>
+    <%= select_tag "opened-spoons", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
+    Straws
+  </li>
+  <li>
+    <%= number_field_tag "unopened-spoons", nil, min: 0, class: "count", "data-amount"=>"20" %>
+    <%= select_tag "opened-spoons", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
+    Napkins
+  </li>
+  <li>
+    <%= number_field_tag "unopened-spoons", nil, min: 0, class: "count", "data-amount"=>"20" %>
+    <%= select_tag "opened-spoons", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
+    Ice Cream
+  </li>
+  <li>
+    <%= number_field_tag "unopened-spoons", nil, min: 0, class: "count", "data-amount"=>"20" %>
+    <%= select_tag "opened-spoons", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
+    Sweetened Condensed Milk
+  </li>
+  <li>
+    <%= number_field_tag "unopened-spoons", nil, min: 0, class: "count", "data-amount"=>"20" %>
+    <%= select_tag "opened-spoons", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
+    Evaporated Milk
+  </li>
+  <li>
+    <%= number_field_tag "unopened-spoons", nil, min: 0, class: "count", "data-amount"=>"20" %>
+    <%= select_tag "opened-spoons", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
+    Heavy Cream
+  </li>
+  <li>
+    <%= number_field_tag "unopened-spoons", nil, min: 0, class: "count", "data-amount"=>"20" %>
+    <%= select_tag "opened-spoons", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %>
+    Pop Rocks
+  </li>
+
+<% end %>
+</div>
+</body>
+</html>

@@ -9,7 +9,7 @@
 }
 
 .openclose h2 {
-  font-size: 18px;
+  font-size: 22px;
   margin-top: 10px;
   margin-bottom: 0;
 }
@@ -19,13 +19,50 @@
   margin: 0;
 }
 
-.openclose .header, .header2 {
+.openclose select {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.openclose .header {
   font-size: smaller;
   color: gray;
 }
 
-.openclose .header2 {
+.openclose .indent-radio-na {
   padding-left: 12px;
+}
+
+.openclose .indent-radio-full {
+  padding-left: 3px;
+}
+
+.openclose .indent-radio-3-4 {
+  padding-left: 16px;
+}
+
+.openclose .indent-radio-1-2 {
+  padding-left: 19px;
+}
+
+.openclose .indent-radio-1-4 {
+  padding-left: 19px;
+}
+
+.openclose .indent-radio-empty {
+  padding-left: 13px;
+}
+
+.openclose .indent2 {
+  padding-left: 62px;
+}
+
+.openclose .indent3 {
+  padding-left: 60px;
+}
+
+.openclose .indent4 {
+  padding-left: 46px;
 }
 
 .openclose ul {
@@ -35,10 +72,6 @@
 
 .openclose li {
   list-style-type: none;
-}
-
-.openclose ul.indent1 {
-  margin-left: 20px;
 }
 
 .openclose label {
@@ -65,13 +98,14 @@ input[type=checkbox], input[type=radio] {
 .count {
   width: 80px;
   height: 20px;
+  border: 1px solid black;
 }
 
 .total {
   box-sizing: border-box;
   width: 85px;
   height: 24px;
-  border: 2px solid black;
+  border: 1px solid lightgray;
   padding-right: 7px;
   margin-bottom: 20px;
 }
