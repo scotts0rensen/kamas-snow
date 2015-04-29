@@ -10,8 +10,7 @@
 
 .openclose h2 {
   font-size: 22px;
-  margin-top: 10px;
-  margin-bottom: 0;
+  margin: 10px 0;
 }
 
 .openclose h3 {
@@ -63,6 +62,14 @@
 
 .openclose .indent4 {
   padding-left: 46px;
+}
+
+.openclose .indent5 {
+  padding-left: 102px;
+}
+
+.openclose .indent6 {
+  padding-left: 40px;
 }
 
 .openclose ul {
