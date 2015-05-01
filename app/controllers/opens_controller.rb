@@ -2,6 +2,11 @@ class OpensController < ApplicationController
   before_action :set_open, only: [:show, :edit, :update, :destroy]
   layout "checklists"
 
+  def open
+    open = Open.find_or_create_by(date: Date.today)
+    redirect_to edit_open_path(open)
+  end
+
   def index
     @opens = Open.all
   end
@@ -33,7 +38,7 @@ class OpensController < ApplicationController
   def update
     respond_to do |format|
       if @open.update(open_params)
-        format.html { redirect_to @open, notice: 'Open was successfully updated.' }
+        format.html { redirect_to open_path, notice: 'Open was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

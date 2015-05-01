@@ -1,30 +1,27 @@
-<div class="openclose">
+<div class="checklist">
 <p id="notice"><%= notice %></p>
 
-<div class="show-data"
-  <span>Date:</span>
-  <%= @open.date %>
-</div>
+<h1>OPEN - <%= @open.date.strftime("%A, %B %d") %></h1>
 
 <hr/>
 
 <%= render partial: "shared/checklist_show",
-  locals: {open: @open, section_header: "", section: "init", checklist_type: "open"} %>
+  locals: {checklist: @open, section_header: "", section: "init", checklist_type: "open"} %>
 
 <hr/>
 
 <%= render partial: "shared/checklist_show",
-  locals: {open: @open, section_header: "Count Money", section: "money", checklist_type: "open"} %>
+  locals: {checklist: @open, section_header: "Count Money", section: "money", checklist_type: "open"} %>
 
 <hr/>
 
 <%= render partial: "shared/checklist_show",
-  locals: {open: @open, section_header: "Inside Trailer", section: "inside", checklist_type: "open"} %>
+  locals: {checklist: @open, section_header: "Inside Trailer", section: "inside", checklist_type: "open"} %>
 
 <hr/>
 
 <%= render partial: "shared/checklist_show",
-  locals: {open: @open, section_header: "Outside Trailer", section: "outside", checklist_type: "open"} %>
+  locals: {checklist: @open, section_header: "Outside Trailer", section: "outside", checklist_type: "open"} %>
 
 
 <%= link_to 'Edit', edit_open_path(@open) %> |

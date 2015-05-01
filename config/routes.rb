@@ -8,7 +8,10 @@ KamasSnow::Application.routes.draw do
 
   get 'inventory' => 'openclose#inventory'
 
-  get 'openclose' => 'opens#openclose'
+  get 'open' => 'opens#open'
+  get 'close' => 'closes#close'
+  get 'shift' => 'closes#close'
+
   resources :opens
   resources :closes
   resources :checklist_configs

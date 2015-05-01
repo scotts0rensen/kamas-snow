@@ -11,13 +11,6 @@
     </div>
   <% end %>
 
-  <ul>
-    <li>
-      Date
-      <%= f.text_field :date %>
-    </li>
-  </ul>
-
   <%= render partial: "shared/trailer_checklist",
     locals: {f: f, section_header: "Outside Trailer", section: "outside", checklist_type: "close"} %>
 

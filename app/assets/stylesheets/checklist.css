@@ -1,77 +1,106 @@
-.openclose {
+header ul {
+  width: 100%;
+  float: left;
+  margin: 0 0 3em 0;
+  padding: 0;
+  list-style: none;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+
+header li {
+  float: left;
+}
+
+header li a {
+  display: block;
+  padding: 8px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #069;
+  border-right: 1px solid #ccc;
+}
+
+header li a:hover {
+  color: #c00;
+  background-color: #fff;
+}
+
+.checklist {
   width: 900px;
   margin: 0 auto;
   line-height: 34px;
 }
 
-.openclose h1 {
+.checklist h1 {
   font-size: 26px;
 }
 
-.openclose h2 {
+.checklist h2 {
   font-size: 22px;
   margin: 20px 0 10px 0;
 }
 
-.openclose h3 {
+.checklist h3 {
   font-weight: bold;
   margin: 0;
 }
 
-.openclose select {
+.checklist select {
   font-size: 18px;
   margin-right: 10px;
 }
 
-.openclose .header {
+.checklist .header {
   font-size: smaller;
   color: gray;
 }
 
-.openclose .table {
+.checklist .table {
   display: table;
 }
 
-.openclose .row {
+.checklist .row {
   display: table-row;
 }
 
-.openclose .row-header {
+.checklist .row-header {
   width: 140px;
   padding-right: 20px;
 }
 
-.openclose .cell {
+.checklist .cell {
   display: table-cell;
 }
 
-.openclose .flavors-table {
+.checklist .flavors-table {
   margin-top: 20px;
 }
 
-.openclose .flavors-table h3 {
+.checklist .flavors-table h3 {
   font-weight: bold;
   font-size: 19px;
 }
 
-.openclose .flavor-color {
+.checklist .flavor-color {
   color: black;
 }
 
-.openclose ul {
+.checklist ul {
   margin-top: 0;
   padding-left: 0
 }
 
-.openclose li {
+.checklist li {
   list-style-type: none;
 }
 
-.openclose .indent-radio-na {
+.checklist .indent-radio-na {
   padding-left: 12px;
 }
 
-.openclose input[type=checkbox] ~ span {
+.checklist input[type=checkbox] ~ span {
   padding-left: 40px;
 }
 
@@ -97,7 +126,7 @@ input[type=checkbox], input[type=radio] {
   box-sizing: border-box;
   width: 85px;
   height: 24px;
-  border: 1px solid lightgray;
+  border: 1px solid black;
   padding-right: 7px;
   margin-bottom: 20px;
 }
@@ -106,13 +135,13 @@ input[type=checkbox], input[type=radio] {
   font-weight: bold;
 }
 
-.openclose input[type=submit] {
+.checklist input[type=submit] {
   margin: 20px 0;
   padding: 20px;
   background-color: #1677c4;
   color: white;
   border-radius: 10px;
   cursor: pointer;
-  font-size: .8em;
+  font-size: 1.8em;
 }
 

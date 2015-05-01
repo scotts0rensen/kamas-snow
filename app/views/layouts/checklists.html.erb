@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kamas Snow - Opening Checklist</title>
-  <%= stylesheet_link_tag    "openclose", media: "all" %>
+  <title>Kamas Snow - Checklists</title>
+  <%= stylesheet_link_tag    "checklist", media: "all" %>
   <%= javascript_include_tag "application" %>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 
 <body>
+
+<header>
+  <ul>
+    <li><%= link_to "Open", open_path %></li>
+    <li><%= link_to "Close", close_path %></li>
+    <li><%= link_to "Shift", shift_path %></li>
+    <li><%= link_to "Inventory", inventory_path %></li>
+  </ul>
+</header>
 
 <%= yield %>
 

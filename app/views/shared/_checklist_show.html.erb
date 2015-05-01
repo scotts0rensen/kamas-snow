@@ -3,7 +3,7 @@
   <% ChecklistConfig.where(checklist_type: checklist_type, section: section).order(:order).each do |config| %>
     <li>
       <span><%= config.name %>:</span>
-      <span><%= open.send(config.name.to_sym) %></span>
+      <span><%= checklist.send(config.name.to_sym) %></span>
     </li>
   <% end %>
 </ul>

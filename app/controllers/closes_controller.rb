@@ -2,6 +2,11 @@ class ClosesController < ApplicationController
   before_action :set_close, only: [:show, :edit, :update, :destroy]
   layout "checklists"
 
+  def close
+    close = Close.find_or_create_by(date: Date.today)
+    redirect_to edit_close_path(close)
+  end
+
   def index
     @closes = Close.all
   end
