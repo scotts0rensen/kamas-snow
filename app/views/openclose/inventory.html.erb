@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>KamasSnow</title>
-  <%= stylesheet_link_tag    "openclose", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "openclose", media: "all" %>
+  <%= javascript_include_tag "application" %>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
@@ -300,6 +300,31 @@
     <div class="cell"><%= select_tag "opened-napkins", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %></div>
   </div>
   <div class="row">
+    <div class="cell row-header">Paper Towells</div>
+    <div class="cell"><%= number_field_tag "unopened-paper_towells", nil, min: 0, class: "count", "data-amount"=>"20" %></div>
+    <div class="cell"><%= select_tag "opened-paper_towells", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %></div>
+  </div>
+  <div class="row">
+    <div class="cell row-header">Gloves</div>
+    <div class="cell"><%= number_field_tag "unopened-gloves", nil, min: 0, class: "count", "data-amount"=>"20" %></div>
+    <div class="cell"><%= select_tag "opened-gloves", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %></div>
+  </div>
+  <div class="row">
+    <div class="cell row-header">Large garbage bags</div>
+    <div class="cell"><%= number_field_tag "unopened-large_bags", nil, min: 0, class: "count", "data-amount"=>"20" %></div>
+    <div class="cell"><%= select_tag "opened-large_bags", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %></div>
+  </div>
+  <div class="row">
+    <div class="cell row-header">Small garbage bags</div>
+    <div class="cell"><%= number_field_tag "unopened-small_bags", nil, min: 0, class: "count", "data-amount"=>"20" %></div>
+    <div class="cell"><%= select_tag "opened-small_bags", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %></div>
+  </div>
+  <div class="row">
+    <div class="cell row-header">Order pads</div>
+    <div class="cell"><%= number_field_tag "unopened-order_pads", nil, min: 0, class: "count", "data-amount"=>"20" %></div>
+    <div class="cell"><%= select_tag "opened-order_pads", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %></div>
+  </div>
+  <div class="row">
     <div class="cell row-header">Ice Cream</div>
     <div class="cell"><%= number_field_tag "unopened-icecream", nil, min: 0, class: "count", "data-amount"=>"20" %></div>
     <div class="cell"><%= select_tag "opened-icecream", options_for_select(["", "Full", "3/4", "1/2", "1/4", "Empty"]) %></div>
@@ -317,6 +342,10 @@
   <div class="row">
     <div class="cell row-header">Evaporated Milk</div>
     <div class="cell"><%= number_field_tag "unopened-em", nil, min: 0, class: "count", "data-amount"=>"20" %></div>
+  </div>
+  <div class="row">
+    <div class="cell row-header">Chocolate Syrup</div>
+    <div class="cell"><%= number_field_tag "unopened-choc", nil, min: 0, class: "count", "data-amount"=>"20" %></div>
   </div>
   <div class="row">
     <div class="cell row-header">Sugar</div>

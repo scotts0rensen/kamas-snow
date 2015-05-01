@@ -1,0 +1,16 @@
+<h2>Count money</h2>
+<ul class="count-money">
+  <% ChecklistConfig.where(checklist_type: checklist_type, section: "money").order(:order).each do |config| %>
+    <% unless config.name == "total" %>
+      <li>
+        <%= f.number_field config.name, min: 0, class: "count", "data-amount" => config.data %>
+        <%= config.label %>
+      </li>
+    <% else %>
+      <li class="strong">
+        <%= f.text_field config.name, class: "total", disabled: true %>
+        <%= config.label %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>

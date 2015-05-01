@@ -1,0 +1,9 @@
+<ul>
+  <span class="header">Done</span>
+  <% ChecklistConfig.where(checklist_type: "open", section: "init").order(:order).each do |config| %>
+    <li>
+      <%= f.check_box config.name %>
+      <%= config.label %>
+    </li>
+  <% end %>
+</ul>

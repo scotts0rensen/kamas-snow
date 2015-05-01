@@ -1,0 +1,19 @@
+<h2><%= section_header %></h2>
+<ul>
+  <div class="header">
+    <span>Done</span>
+    <span class="indent-radio-na">N/A</span>
+  </div>
+  <% ChecklistConfig.where(checklist_type: checklist_type, section: section).order(:order).each do |config| %>
+    <li>
+      <% if config.data_type == "optional" %>
+        <%= f.radio_button config.name, "done" %>
+        <%= f.radio_button config.name, "na" %>
+        <%= config.label %>
+      <% else %>
+        <%= f.check_box config.name %><span>
+        <span><%= config.label %></span>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

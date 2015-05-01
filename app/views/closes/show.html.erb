@@ -1,0 +1,28 @@
+<div class="openclose">
+<p id="notice"><%= notice %></p>
+
+<div class="show-data"
+  <span>Date:</span>
+  <%= @close.date %>
+</div>
+
+<hr/>
+
+<%= render partial: "shared/checklist_show",
+  locals: {close: @close, section_header: "Outside Trailer", section: "outside", checklist_type: "close"} %>
+
+<hr/>
+
+<%= render partial: "shared/checklist_show",
+  locals: {close: @close, section_header: "Count Money", section: "money", checklist_type: "close"} %>
+
+<hr/>
+
+<%= render partial: "shared/checklist_show",
+  locals: {close: @close, section_header: "Inside Trailer", section: "inside", checklist_type: "close"} %>
+
+<hr/>
+
+<%= link_to 'Edit', edit_close_path(@close) %> |
+<%= link_to 'Back', closes_path %>
+</div>

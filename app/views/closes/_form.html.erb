@@ -1,0 +1,37 @@
+<%= form_for(@close) do |f| %>
+  <% if @close.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@close.errors.count, "error") %> prohibited this close from being saved:</h2>
+
+      <ul>
+      <% @close.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <ul>
+    <li>
+      Date
+      <%= f.text_field :date %>
+    </li>
+  </ul>
+
+  <%= render partial: "shared/trailer_checklist",
+    locals: {f: f, section_header: "Outside Trailer", section: "outside", checklist_type: "close"} %>
+
+  <hr/>
+
+  <%= render partial: "shared/money_checklist",
+    locals: {f: f, checklist_type: "close"} %>
+
+  <hr/>
+
+  <%= render partial: "shared/trailer_checklist",
+    locals: {f: f, section_header: "Inside Trailer", section: "inside", checklist_type: "close"} %>
+
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>

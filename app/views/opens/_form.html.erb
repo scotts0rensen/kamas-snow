@@ -1,0 +1,42 @@
+<%= form_for(@open) do |f| %>
+  <% if @open.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@open.errors.count, "error") %> prohibited this open from being saved:</h2>
+
+      <ul>
+      <% @open.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <ul>
+    <li>
+      Date
+      <%= f.text_field :date %>
+    </li>
+  </ul>
+
+  <%= render partial: "shared/trailer_init_checklist",
+    locals: {f: f} %>
+
+  <hr/>
+
+  <%= render partial: "shared/money_checklist",
+    locals: {f: f, checklist_type: "open"} %>
+
+  <hr/>
+
+  <%= render partial: "shared/trailer_checklist",
+    locals: {f: f, section_header: "Inside Trailer", section: "inside", checklist_type: "open"} %>
+
+  <hr/>
+
+  <%= render partial: "shared/trailer_checklist",
+    locals: {f: f, section_header: "Outside Trailer", section: "outside", checklist_type: "open"} %>
+
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>
