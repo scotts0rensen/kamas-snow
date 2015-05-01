@@ -1,4 +1,19 @@
+<div class="checklist">
 <p id="notice"><%= notice %></p>
 
+<h1>HELP SHIFT - <%= @shift.date.strftime("%A, %B %d") %></h1>
+
+<hr/>
+
+<%= render partial: "shared/checklist_show",
+  locals: {checklist: @shift, section_header: "Inside Trailer", section: "inside", checklist_type: "shift"} %>
+
+<hr/>
+
+<%= render partial: "shared/checklist_show",
+  locals: {checklist: @shift, section_header: "Outside Trailer", section: "outside", checklist_type: "shift"} %>
+
+
 <%= link_to 'Edit', edit_shift_path(@shift) %> |
-<%= link_to 'Back', shifts_path %>
+<%= link_to 'List', shifts_path %>
+</div>

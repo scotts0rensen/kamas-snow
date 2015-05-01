@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150430164439) do
+ActiveRecord::Schema.define(version: 20150501214633) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -198,11 +198,16 @@ ActiveRecord::Schema.define(version: 20150430164439) do
 
   create_table "shifts", force: true do |t|
     t.date     "date"
-    t.string   "gray_water"
-    t.string   "trailer_sides"
+    t.string   "fill_paper"
+    t.string   "fill_flavors"
+    t.string   "fill_scm"
     t.string   "counters"
-    t.string   "street"
     t.string   "syrup_bottles"
+    t.string   "street"
+    t.string   "outside_trash"
+    t.string   "tables"
+    t.string   "trailer_sides"
+    t.string   "gray_water"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

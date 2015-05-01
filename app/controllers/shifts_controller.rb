@@ -1,28 +1,26 @@
 class ShiftsController < ApplicationController
   before_action :set_shift, only: [:show, :edit, :update, :destroy]
+  layout "checklists"
 
-  # GET /shifts
-  # GET /shifts.json
+  def shift
+    shift = Shift.find_or_create_by(date: Date.today)
+    redirect_to edit_shift_path(shift)
+  end
+
   def index
     @shifts = Shift.all
   end
 
-  # GET /shifts/1
-  # GET /shifts/1.json
   def show
   end
 
-  # GET /shifts/new
   def new
     @shift = Shift.new
   end
 
-  # GET /shifts/1/edit
   def edit
   end
 
-  # POST /shifts
-  # POST /shifts.json
   def create
     @shift = Shift.new(shift_params)
 
@@ -37,8 +35,6 @@ class ShiftsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /shifts/1
-  # PATCH/PUT /shifts/1.json
   def update
     respond_to do |format|
       if @shift.update(shift_params)
@@ -51,8 +47,6 @@ class ShiftsController < ApplicationController
     end
   end
 
-  # DELETE /shifts/1
-  # DELETE /shifts/1.json
   def destroy
     @shift.destroy
     respond_to do |format|
@@ -62,13 +56,14 @@ class ShiftsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_shift
-      @shift = Shift.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def shift_params
-      params[:shift]
-    end
+  def set_shift
+    @shift = Shift.find(params[:id])
+  end
+
+  def shift_params
+    params.require(:shift).permit(:date, :fill_paper, :fill_flavors, :fill_scm, :counters,
+      :street, :outside_trash, :tables, :trailer_sides, :gray_water, :syrup_bottles)
+
+  end
 end

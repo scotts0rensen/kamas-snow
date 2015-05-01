@@ -1,4 +1,4 @@
-<%= form_for(@shift) do |f| %>
+<%= form_for @shift, url: {action: "update"} do |f| %>
   <% if @shift.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@shift.errors.count, "error") %> prohibited this shift from being saved:</h2>
@@ -11,7 +11,17 @@
     </div>
   <% end %>
 
+  <hr/>
+
+  <%= render partial: "shared/trailer_checklist",
+    locals: {f: f, section_header: "Inside Trailer", section: "inside", checklist_type: "shift"} %>
+
+  <hr/>
+
+  <%= render partial: "shared/trailer_checklist",
+    locals: {f: f, section_header: "Outside Trailer", section: "outside", checklist_type: "shift"} %>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit" %>
   </div>
 <% end %>

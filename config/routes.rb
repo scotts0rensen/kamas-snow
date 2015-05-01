@@ -8,7 +8,7 @@ KamasSnow::Application.routes.draw do
 
   get 'open' => 'opens#open'
   get 'close' => 'closes#close'
-  get 'shift' => 'closes#close'
+  get 'shift' => 'shifts#shift'
   get 'inventory' => 'inventories#inventory'
   get 'cups' => 'cups#cups'
 

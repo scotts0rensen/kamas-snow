@@ -35,7 +35,7 @@ checklist type, section, "fill_flavors", "Fill flavors", "optional", 6
 checklist type, section, "fill_scm", "Fill SCM and HC", "optional", 7
 checklist type, section, "sugar_water", "Make sugar water", "optional", 8
 checklist type, section, "dishes_away", "Put clean dishes away", "optional", 9
-checklist type, section, "counters", "Wipe down counters and shelves", "optional", 10
+checklist type, section, "counters", "Wipe down walls, countertops, shelves, door, curtains, fridge, freezer", "optional", 4
 checklist type, section, "inventory", "Inventory", "required", 11
 
 section = "outside"
@@ -47,6 +47,8 @@ checklist type, section, "gray_water", "Empty gray water", "optional", 5
 checklist type, section, "trash_can", "Put out large trash can with new bag", "required", 6
 checklist type, section, "open_awnings", "Open awnings", "required", 7
 checklist type, section, "speaker_up", "Put speaker on top of awning", "required", 8
+
+
 
 type = "close"
 
@@ -89,6 +91,25 @@ checklist type, section, "hide_ipad", "Hide ipad", "required", 20
 checklist type, section, "lock_trailer", "Lock trailer", "required", 21
 checklist type, section, "throw_trash", "Throw trash away behind Food Town", "required", 22
 checklist type, section, "deliver_stuff", "Deliver empty sugar bucket, blue money zipper bag, keys, and full green rag basket to Sorensens", "required", 23
+
+
+
+type = "shift"
+
+section = "inside"
+checklist type, section, "fill_paper", "Fill napkins, straws, and spoons", "optional", 1
+checklist type, section, "fill_flavors", "Fill flavors", "optional", 2
+checklist type, section, "fill_scm", "Fill SCM and HC", "optional", 3
+checklist type, section, "counters", "Wipe down walls, countertops, shelves, door, curtains, fridge, freezer", "optional", 4
+checklist type, section, "syrup_bottles", "Wipe off syrup bottles", "optional", 5
+
+section = "outside"
+checklist type, section, "street", "Dump excess snow bucket and brush street", "optional", 1
+checklist type, section, "outside_trash", "Pick up garbage outside", "optional", 2
+checklist type, section, "tables", "Clean tables and benches", "optional", 3
+checklist type, section, "trailer_sides", "Wipe down sides of trailer", "optional", 4
+checklist type, section, "gray_water", "Empty gray water", "optional", 5
+
 
 type = "inventory"
 
