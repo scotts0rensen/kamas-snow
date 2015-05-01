@@ -3,6 +3,7 @@
 <head>
   <title>Kamas Snow - Checklists</title>
   <%= stylesheet_link_tag    "checklist", media: "all" %>
+  <%= stylesheet_link_tag    "jquery.growl", media: "all" %>
   <%= javascript_include_tag "application" %>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
@@ -14,9 +15,14 @@
   <ul>
     <li><%= link_to "Open", open_path %></li>
     <li><%= link_to "Close", close_path %></li>
-    <li><%= link_to "Shift", shift_path %></li>
+    <li><a id="shift" href="#">Help Shift</a></li>
     <li><%= link_to "Inventory", inventory_path %></li>
   </ul>
+
+  <% flash.each do |key, value| %>
+    <div class="flash-message"><%= value %></div>
+  <% end %>
+
 </header>
 
 <%= yield %>

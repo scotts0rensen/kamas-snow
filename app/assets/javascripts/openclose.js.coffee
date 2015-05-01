@@ -28,3 +28,6 @@ $ ->
       tot = parseInt(total.val()) + sub
       total.val(tot.toString())
 
+  msg = $(".flash-message").html()
+  if msg
+    $.growl.notice( {title: msg, message: ""} )

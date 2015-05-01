@@ -1,4 +1,4 @@
-<%= form_for(@close) do |f| %>
+<%= form_for @close, url: {action: "update"} do |f| %>
   <% if @close.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@close.errors.count, "error") %> prohibited this close from being saved:</h2>
@@ -10,6 +10,8 @@
       </ul>
     </div>
   <% end %>
+
+  <hr/>
 
   <%= render partial: "shared/trailer_checklist",
     locals: {f: f, section_header: "Outside Trailer", section: "outside", checklist_type: "close"} %>

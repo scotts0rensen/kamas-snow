@@ -89,6 +89,96 @@ class CreateChecklists < ActiveRecord::Migration
       t.timestamps
     end
 
+    create_table :shifts do |t|
+      t.date :date
+      t.string :gray_water
+      t.string :trailer_sides
+      t.string :counters
+      t.string :street
+      t.string :syrup_bottles
+      t.timestamps
+    end
+
+    create_table :inventories do |t|
+      t.date :date
+      t.integer :ice_cream
+      t.integer :sugar
+      t.string :dish_soap
+      t.string :hand_soap
+      t.string :bleach
+      t.string :pine_sol
+
+      t.integer :snowball_shed
+      t.integer :snowball_sleeves
+      t.integer :snowball_loose
+      t.integer :snowball_total
+      t.integer :mountain_shed
+      t.integer :mountain_sleeves
+      t.integer :mountain_loose
+      t.integer :mountain_total
+      t.integer :glacier_shed
+      t.integer :glacier_sleeves
+      t.integer :glacier_loose
+      t.integer :glacier_total
+      t.integer :avalanche_shed
+      t.integer :avalanche_sleeves
+      t.integer :avalanche_loose
+      t.integer :avalanche_total
+
+      t.string :bahama_mama
+      t.string :banana
+      t.string :blueberry
+      t.string :blue_raspberry
+      t.string :bubble_gum
+      t.string :byu
+      t.string :cherry
+      t.string :coconut
+      t.string :cotton_candy
+      t.string :grape
+      t.string :georgia_peach
+      t.string :green_apple
+      t.string :lime
+      t.string :mango
+      t.string :orange
+      t.string :pina_colada
+      t.string :pineapple
+      t.string :pink_lemonade
+      t.string :rootbeer
+      t.string :silver_fox
+      t.string :strawberry
+      t.string :tigers_blood
+      t.string :utes
+      t.string :watermelon
+      t.string :wedding_cake
+      t.string :wildcat
+      t.string :dreamcicle
+      t.string :sodium_benzoate
+      t.string :citric_acid
+      t.string :sour_snow
+
+      t.integer :spoons_full
+      t.string :spoons_partial
+      t.integer :straws
+      t.integer :napkins
+      t.integer :paper_towells
+      t.integer :gloves
+      t.string :large_garbage_bags
+      t.string :small_garbage_bags
+      t.string :order_pads
+      t.integer :hc
+      t.integer :scm
+      t.integer :em
+      t.string :chocolate
+      t.string :pop_rocks
+
+      t.timestamps
+    end
+
+    create_table :cups do |t|
+      t.date :date
+      t.timestamps
+    end
+
     create_table :close_details do |t|
       t.references :close
       t.references :checklist_config

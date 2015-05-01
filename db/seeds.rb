@@ -89,3 +89,53 @@ checklist type, section, "hide_ipad", "Hide ipad", "required", 20
 checklist type, section, "lock_trailer", "Lock trailer", "required", 21
 checklist type, section, "throw_trash", "Throw trash away behind Food Town", "required", 22
 checklist type, section, "deliver_stuff", "Deliver empty sugar bucket, blue money zipper bag, keys, and full green rag basket to Sorensens", "required", 23
+
+type = "inventory"
+
+section = "reds"
+checklist type, section, "bahama_mama", "Bahama Mama", "", 1
+checklist type, section, "cherry", "Cherry", "", 2
+checklist type, section, "cotton_candy", "Cotton Candy", "", 3
+checklist type, section, "georgia_peach", "Georgia Peach", "", 4
+checklist type, section, "strawberry", "Strawberry", "", 5
+checklist type, section, "tigers_blood", "Tigers Blood", "", 6
+checklist type, section, "utes", "Utes", "", 7
+checklist type, section, "watermelon", "Watermelon", "", 8
+
+section = "pinks"
+checklist type, section, "bubble_gum", "Bubble Gum", "", 1
+checklist type, section, "pink_lemonade", "Pink Lemonade", "", 2
+
+section = "yellows"
+checklist type, section, "banana", "Banana", "", 1
+checklist type, section, "mango", "Mango", "", 2
+
+section = "oranges"
+checklist type, section, "orange", "Orange", "", 1
+checklist type, section, "dreamcicle", "Dreamcicle", "", 2
+
+section = "browns"
+checklist type, section, "grape", "Grape", "", 1
+checklist type, section, "rootbeer", "Root Beer", "", 2
+
+section = "greens"
+checklist type, section, "green_apple", "Granny Smith Apple", "", 1
+checklist type, section, "lime", "Lime", "", 2
+checklist type, section, "wildcat", "Wildcat", "", 3
+
+section = "blues"
+checklist type, section, "blueberry", "Blueberry", "", 1
+checklist type, section, "blue_raspberry", "Blue Raspberry", "", 2
+checklist type, section, "byu", "BYU", "", 3
+
+section = "whites"
+checklist type, section, "coconut", "Coconut", "", 1
+checklist type, section, "pina_colada", "Pina Colada", "", 2
+checklist type, section, "pineapple", "Pineapple", "", 3
+checklist type, section, "silver_fox", "Silver Fox", "", 4
+checklist type, section, "wedding_cake", "Wedding Cake", "", 5
+
+section = "other"
+checklist type, section, "sodium_benzoate", "Sodium Benzoate", "", 1
+checklist type, section, "citric_acid", "Citric Acid", "", 2
+checklist type, section, "sour_snow", "Sour Snow", "", 3

@@ -26,7 +26,7 @@ class ClosesController < ApplicationController
 
     respond_to do |format|
       if @close.save
-        format.html { redirect_to @close, notice: 'Close was successfully created.' }
+        format.html { redirect_to @close, notice: 'Checklist was saved!' }
         format.json { render action: 'show', status: :created, location: @close }
       else
         format.html { render action: 'new' }
@@ -38,7 +38,7 @@ class ClosesController < ApplicationController
   def update
     respond_to do |format|
       if @close.update(close_params)
-        format.html { redirect_to @close, notice: 'Close was successfully updated.' }
+        format.html { redirect_to @close, notice: 'Checklist was saved!' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
