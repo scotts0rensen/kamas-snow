@@ -1,3 +1,7 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .flash-message {
   display: none;
 }
@@ -29,6 +33,24 @@ header li a {
 header li a:hover {
   color: #c00;
   background-color: #fff;
+}
+
+header li.selected a:hover {
+  background-color: rgb(173, 173, 255);
+}
+
+header li.selected a {
+  color: white;
+  background-color: blue;
+}
+
+.menu_id {
+  display: none;
+}
+
+.date {
+  font-size: 24px;
+  font-weight: normal;
 }
 
 .checklist {

@@ -1,6 +1,8 @@
 <div class="checklist">
 
-<h1>HELP SHIFT -- <%= @shift.date.strftime("%A, %B %d") %></h1>
+<h1>HELP SHIFT</h1>
+<input class="menu_id" value="shift"/>
+<span class="date"><%= @shift.date.strftime("%A, %B %e") %></span>
 
 <%= render 'form' %>
 

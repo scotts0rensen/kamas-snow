@@ -1,12 +1,18 @@
-flavors = {
-  "red": ["Cherry", "Tigers Blood"],
-  "yellow": ["Banana", "Ice Cream"],
-  "orange": ["Orange"],
-  "blue/brown": ["BYU", "Blue Raspberry", "Rootbeer"],
-  "white": ["Coconut", "Pina Colada"]
-}
-
 $ ->
+
+  display_notice = ->
+    msg = $(".flash-message").html()
+    if msg
+      $.growl.notice( {title: msg, message: ""} )
+
+  highlight_current_menu = ->
+    $(".selected").removeClass("selected")
+    menu_id = $(".menu_id").val()
+    $("#" + menu_id).addClass("selected")
+
+  display_notice()
+  highlight_current_menu()
+
   $(".count-money input[type=number]").change (event) ->
     ul_ele = $(this).closest("ul")
     total_ele = ul_ele.find(".total")
@@ -27,7 +33,3 @@ $ ->
       sub = parseInt($(count).val() || 0) * parseInt($(count).data("amount"))
       tot = parseInt(total.val()) + sub
       total.val(tot.toString())
-
-  msg = $(".flash-message").html()
-  if msg
-    $.growl.notice( {title: msg, message: ""} )

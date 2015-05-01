@@ -1,6 +1,8 @@
 <div class="checklist">
 
-<h1>OPEN -- <%= @open.date.strftime("%A, %B %d") %></h1>
+<h1>OPEN</h1>
+<input class="menu_id" value="open"/>
+<span class="date"><%= @open.date.strftime("%A, %B %e") %></span></h1>
 
 <%= render 'form' %>
 

@@ -13,10 +13,10 @@
 
 <header>
   <ul>
-    <li><%= link_to "Open", open_path %></li>
-    <li><%= link_to "Close", close_path %></li>
-    <li><%= link_to "Help Shift", shift_path %></li>
-    <li><%= link_to "Inventory", inventory_path %></li>
+    <li id="open"><%= link_to "Open", open_path %></li>
+    <li id="close"><%= link_to "Close", close_path %></li>
+    <li id="shift"><%= link_to "Help Shift", shift_path %></li>
+    <li id="inventory"><%= link_to "Inventory", inventory_path %></li>
   </ul>
 
   <% flash.each do |key, value| %>

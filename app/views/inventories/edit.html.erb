@@ -1,6 +1,8 @@
 <div class="checklist">
 
-<h1>INVENTORY -- <%= @inventory.date.strftime("%A, %B %d") %></h1>
+<h1>INVENTORY<h1>
+<input class="menu_id" value="inventory"/>
+<span class="date"><%= @inventory.date.strftime("%A, %B %e") %></span></h1>
 
 <%= render 'form' %>
 
