@@ -6,6 +6,11 @@ body {
   display: none;
 }
 
+header {
+  width: 900px;
+  margin: 0 auto;
+}
+
 header ul {
   width: 100%;
   float: left;
