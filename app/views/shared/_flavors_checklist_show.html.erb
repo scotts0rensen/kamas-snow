@@ -1,0 +1,7 @@
+<% ChecklistConfig.where(checklist_type: checklist_type, section: section).order(:order).each do |config| %>
+  <h3><%= title %></h3>
+  <li>
+    <span><%= config.label %>:</span>
+    <span><%= inventory.send(config.name.to_sym) %></span>
+  </li>
+<% end %>

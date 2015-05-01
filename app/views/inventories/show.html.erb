@@ -1,0 +1,170 @@
+<div class="checklist">
+<p id="notice"><%= notice %></p>
+
+<h1>INVENTORY - <%= @inventory.date.strftime("%A, %B %d") %></h1>
+
+<h2>Freezer/Shed</h2>
+<ul>
+  <li>
+    <span>Ice Cream:</span>
+    <span><%= @inventory.ice_cream %></span>
+  </li>
+  <li>
+    <span>Sugar:</span>
+    <span><%= @inventory.sugar %></span>
+  </li>
+  <li>
+    <span>Dish Soap:</span>
+    <span><%= @inventory.dish_soap %></span>
+  </li>
+  <li>
+    <span>Hand Soap:</span>
+    <span><%= @inventory.hand_soap %></span>
+  </li>
+  <li>
+    <span>Bleach:</span>
+    <span><%= @inventory.bleach %></span>
+  </li>
+  <li>
+    <span>Pine Sol:</span>
+    <span><%= @inventory.pine_sol %></span>
+  </li>
+</ul>
+
+<hr/>
+
+<h2>Cups</h2>
+<div class="count-cups table">
+  <div class="header row">
+    <div class="cell">&nbsp;</div>
+    <div class="cell">Shed Sleeves</div>
+    <div class="cell">Inside Sleeves</div>
+    <div class="cell">Loose Cups</div>
+    <div class="cell">Total</div>
+  </div>
+  <div class="row">
+    <div class="cell row-header">Snow Ball</div>
+    <div class="cell"><%= @inventory.snowball_shed %></div>
+    <div class="cell"><%= @inventory.snowball_sleeves %></div>
+    <div class="cell"><%= @inventory.snowball_loose %></div>
+    <div class="cell"><%= @inventory.snowball_total %></div>
+  </div>
+  <div class="row">
+    <div class="cell row-header">Mountain</div>
+    <div class="cell"><%= @inventory.mountain_shed %></div>
+    <div class="cell"><%= @inventory.mountain_sleeves %></div>
+    <div class="cell"><%= @inventory.mountain_loose %></div>
+    <div class="cell"><%= @inventory.mountain_total %></div>
+  </div>
+  <div class="row">
+    <div class="cell row-header">Glacier</div>
+    <div class="cell"><%= @inventory.glacier_shed %></div>
+    <div class="cell"><%= @inventory.glacier_sleeves %></div>
+    <div class="cell"><%= @inventory.glacier_loose %></div>
+    <div class="cell"><%= @inventory.glacier_total %></div>
+  </div>
+  <div class="row">
+    <div class="cell row-header">Avalanche</div>
+    <div class="cell"><%= @inventory.avalanche_shed %></div>
+    <div class="cell"><%= @inventory.avalanche_sleeves %></div>
+    <div class="cell"><%= @inventory.avalanche_loose %></div>
+    <div class="cell"><%= @inventory.avalanche_total %></div>
+  </div>
+</div>
+
+<hr/>
+
+<h2>Flavor Concentrates</h2>
+
+<%= render partial: "shared/flavors_checklist_show",
+  locals: {inventory: @inventory, checklist_type: "inventory", section: "reds", title: "Reds"} %>
+
+<%= render partial: "shared/flavors_checklist_show",
+  locals: {inventory: @inventory, checklist_type: "inventory", section: "pinks", title: "Pinks"} %>
+
+<%= render partial: "shared/flavors_checklist_show",
+  locals: {inventory: @inventory, checklist_type: "inventory", section: "yellows", title: "Yellows"} %>
+
+<%= render partial: "shared/flavors_checklist_show",
+  locals: {inventory: @inventory, checklist_type: "inventory", section: "oranges", title: "Oranges"} %>
+
+<%= render partial: "shared/flavors_checklist_show",
+  locals: {inventory: @inventory, checklist_type: "inventory", section: "browns", title: "Browns/Purples"} %>
+
+<%= render partial: "shared/flavors_checklist_show",
+  locals: {inventory: @inventory, checklist_type: "inventory", section: "greens", title: "Greens"} %>
+
+<%= render partial: "shared/flavors_checklist_show",
+  locals: {inventory: @inventory, checklist_type: "inventory", section: "blues", title: "Blues"} %>
+
+<%= render partial: "shared/flavors_checklist_show",
+  locals: {inventory: @inventory, checklist_type: "inventory", section: "whites", title: "Whites"} %>
+
+<%= render partial: "shared/flavors_checklist_show",
+  locals: {inventory: @inventory, checklist_type: "inventory", section: "other", title: "Other"} %>
+
+<hr/>
+
+<div class="table">
+  <div class="header row">
+    <div class="cell row-header">&nbsp;</div>
+    <div class="cell">Unopened</div>
+    <div class="cell">Opened</div>
+  </div>
+  <div class="row">
+    <div class="cell row-header">Spoons</div>
+    <div class="cell"><%= @inventory.spoons_full %></div>
+    <div class="cell"><%= @inventory.spoons_partial %></div>
+  </div>
+  <div class="row">
+    <div class="cell row-header">Straws</div>
+    <div class="cell"><%= @inventory.straws %></div>
+  </div>
+  <div class="row">
+    <div class="cell row-header">Napkins</div>
+    <div class="cell"><%= @inventory.napkins %></div>
+  </div>
+  <div class="row">
+    <div class="cell row-header">Paper Towells</div>
+    <div class="cell"><%= @inventory.paper_towells %></div>
+  </div>
+  <div class="row">
+    <div class="cell row-header">Gloves</div>
+    <div class="cell"><%= @inventory.gloves %></div>
+  </div>
+  <div class="row">
+    <div class="cell row-header">Large garbage bags</div>
+    <div class="cell"><%= @inventory.large_garbage_bags %></div>
+  </div>
+  <div class="row">
+    <div class="cell row-header">Small garbage bags</div>
+    <div class="cell"><%= @inventory.small_garbage_bags %></div>
+  </div>
+  <div class="row">
+    <div class="cell row-header">Order pads</div>
+    <div class="cell"><%= @inventory.order_pads %></div>
+  </div>
+  <div class="row">
+    <div class="cell row-header">Heavy Cream</div>
+    <div class="cell"><%= @inventory.hc %></div>
+  </div>
+  <div class="row">
+    <div class="cell row-header">Sweetened Condensed Milk</div>
+    <div class="cell"><%= @inventory.scm %></div>
+  </div>
+  <div class="row">
+    <div class="cell row-header">Evaporated Milk</div>
+    <div class="cell"><%= @inventory.em %></div>
+  </div>
+  <div class="row">
+    <div class="cell row-header">Chocolate Syrup</div>
+    <div class="cell"><%= @inventory.chocolate %></div>
+  </div>
+  <div class="row">
+    <div class="cell row-header">Pop Rocks</div>
+    <div class="cell"><%= @inventory.pop_rocks %></div>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_inventory_path(@inventory) %> |
+<%= link_to 'List', inventories_path %>

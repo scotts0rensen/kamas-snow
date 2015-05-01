@@ -1,0 +1,20 @@
+<div class="table flavors-table">
+  <div class="header row">
+    <div class="cell row-header"><h3 class="flavor-color"><%= title %></h3></div>
+    <div class="cell">Full</div>
+    <div class="cell">3/4</div>
+    <div class="cell">1/2</div>
+    <div class="cell">1/4</div>
+    <div class="cell">Empty</div>
+  </div>
+  <% ChecklistConfig.where(checklist_type: checklist_type, section: section).order(:order).each do |config| %>
+    <div class="row">
+      <div class="cell row-header"><%= config.label %></div>
+      <div class="cell"><%= f.radio_button config.name, "1" %></div>
+      <div class="cell"><%= f.radio_button config.name, ".75" %></div>
+      <div class="cell"><%= f.radio_button config.name, ".50" %></div>
+      <div class="cell"><%= f.radio_button config.name, ".25" %></div>
+      <div class="cell"><%= f.radio_button config.name, "0" %></div>
+    </div>
+  <% end %>
+</div>
