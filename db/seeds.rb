@@ -120,7 +120,7 @@ checklist type, section, "rootbeer", "Root Beer", "", 2
 
 section = "greens"
 checklist type, section, "green_apple", "Granny Smith Apple", "", 1
-checklist type, section, "lime", "Lime", "", 2
+checklist type, section, "lime", "Lemon Lime", "", 2
 checklist type, section, "wildcat", "Wildcat", "", 3
 
 section = "blues"
