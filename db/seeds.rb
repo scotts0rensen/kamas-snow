@@ -123,38 +123,34 @@ checklist type, section, "tigers_blood", "Tigers Blood", "", 6
 checklist type, section, "utes", "Utes", "", 7
 checklist type, section, "watermelon", "Watermelon", "", 8
 
-section = "pinks"
+section = "pinks_oranges"
 checklist type, section, "bubble_gum", "Bubble Gum", "", 1
-checklist type, section, "pink_lemonade", "Pink Lemonade", "", 2
+checklist type, section, "dreamcicle", "Dreamcicle", "", 2
+checklist type, section, "orange", "Orange", "", 3
+checklist type, section, "pink_lemonade", "Pink Lemonade", "", 4
 
 section = "yellows"
 checklist type, section, "banana", "Banana", "", 1
 checklist type, section, "mango", "Mango", "", 2
+checklist type, section, "pineapple", "Pineapple", "", 3
 
-section = "oranges"
-checklist type, section, "orange", "Orange", "", 1
-checklist type, section, "dreamcicle", "Dreamcicle", "", 2
-
-section = "browns"
-checklist type, section, "grape", "Grape", "", 1
-checklist type, section, "rootbeer", "Root Beer", "", 2
-
-section = "greens"
+section = "greens_browns"
 checklist type, section, "green_apple", "Granny Smith Apple", "", 1
 checklist type, section, "lime", "Lemon Lime", "", 2
-checklist type, section, "wildcat", "Wildcat", "", 3
+checklist type, section, "rootbeer", "Root Beer", "", 3
+checklist type, section, "wildcat", "Wildcat", "", 4
 
-section = "blues"
-checklist type, section, "blueberry", "Blueberry", "", 1
-checklist type, section, "blue_raspberry", "Blue Raspberry", "", 2
-checklist type, section, "byu", "BYU", "", 3
+section = "blues_purples"
+checklist type, section, "grape", "Grape", "", 1
+checklist type, section, "blueberry", "Blueberry", "", 2
+checklist type, section, "blue_raspberry", "Blue Raspberry", "", 3
+checklist type, section, "byu", "BYU", "", 4
 
 section = "whites"
 checklist type, section, "coconut", "Coconut", "", 1
 checklist type, section, "pina_colada", "Pina Colada", "", 2
-checklist type, section, "pineapple", "Pineapple", "", 3
-checklist type, section, "silver_fox", "Silver Fox", "", 4
-checklist type, section, "wedding_cake", "Wedding Cake", "", 5
+checklist type, section, "silver_fox", "Silver Fox", "", 3
+checklist type, section, "wedding_cake", "Wedding Cake", "", 4
 
 section = "other"
 checklist type, section, "sodium_benzoate", "Sodium Benzoate", "", 1
