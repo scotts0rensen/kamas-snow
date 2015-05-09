@@ -1,4 +1,4 @@
-<%= form_for @shift, url: {action: "update"} do |f| %>
+<%= form_for @shift, remote: true, url: {action: "update"}, html: {class: "auto-submit"} do |f| %>
   <% if @shift.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@shift.errors.count, "error") %> prohibited this shift from being saved:</h2>
@@ -21,7 +21,4 @@
   <%= render partial: "shared/trailer_checklist",
     locals: {f: f, section_header: "Outside Trailer", section: "outside", checklist_type: "shift"} %>
 
-  <div class="actions">
-    <%= f.submit "Save" %>
-  </div>
 <% end %>

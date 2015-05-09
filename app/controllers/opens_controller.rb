@@ -26,7 +26,7 @@ class OpensController < ApplicationController
 
     respond_to do |format|
       if @open.save
-        format.html { redirect_to @open, notice: 'Checklist was saved!' }
+        format.html { redirect_to @open }
         format.json { render action: 'show', status: :created, location: @open }
       else
         format.html { render action: 'new' }
@@ -38,7 +38,7 @@ class OpensController < ApplicationController
   def update
     respond_to do |format|
       if @open.update(open_params)
-        format.html { redirect_to open_path, notice: 'Checklist was saved!' }
+        format.html { redirect_to open_path }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

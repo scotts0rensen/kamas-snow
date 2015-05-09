@@ -13,6 +13,9 @@ $ ->
   display_notice()
   highlight_current_menu()
 
+  $(".auto-submit select,input[type=checkbox],input[type=radio],input[type=number]").change (event) ->
+    $(this).parents("form").submit()
+
   $(".count-money input[type=number]").change (event) ->
     ul_ele = $(this).closest("ul")
     total_ele = ul_ele.find(".total")

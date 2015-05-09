@@ -26,7 +26,7 @@ class ShiftsController < ApplicationController
 
     respond_to do |format|
       if @shift.save
-        format.html { redirect_to @shift, notice: 'Shift was successfully created.' }
+        format.html { redirect_to @shift }
         format.json { render action: 'show', status: :created, location: @shift }
       else
         format.html { render action: 'new' }
@@ -38,7 +38,7 @@ class ShiftsController < ApplicationController
   def update
     respond_to do |format|
       if @shift.update(shift_params)
-        format.html { redirect_to @shift, notice: 'Shift was successfully updated.' }
+        format.html { redirect_to @shift }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
