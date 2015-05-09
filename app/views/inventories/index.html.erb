@@ -1,10 +1,9 @@
-<h1>Listing inventories</h1>
+<h1 class="block">Listing inventories</h1>
 
 <table>
   <thead>
     <tr>
       <th>Date</th>
-      <th></th>
       <th></th>
       <th></th>
     </tr>
@@ -14,7 +13,6 @@
     <% @inventories.each do |inventory| %>
       <tr>
         <td><%= inventory.date %></td>
-        <td><%= link_to 'Show', inventory %></td>
         <td><%= link_to 'Edit', edit_inventory_path(inventory) %></td>
         <td><%= link_to 'Destroy', inventory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

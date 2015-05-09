@@ -1,10 +1,9 @@
-<h1>Listing shifts</h1>
+<h1 class="block">Listing shifts</h1>
 
 <table>
   <thead>
     <tr>
       <th>Date</th>
-      <th></th>
       <th></th>
       <th></th>
     </tr>
@@ -14,7 +13,6 @@
     <% @shifts.each do |shift| %>
       <tr>
         <td><%= shift.date %></td>
-        <td><%= link_to 'Show', shift %></td>
         <td><%= link_to 'Edit', edit_shift_path(shift) %></td>
         <td><%= link_to 'Destroy', shift, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

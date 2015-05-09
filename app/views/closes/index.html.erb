@@ -1,10 +1,9 @@
-<h1>Listing closes</h1>
+<h1 class="block">Listing closes</h1>
 
 <table>
   <thead>
     <tr>
       <th>Date</th>
-      <th></th>
       <th></th>
       <th></th>
     </tr>
@@ -14,7 +13,6 @@
     <% @closes.each do |close| %>
       <tr>
         <td><%= close.date %></td>
-        <td><%= link_to 'Show', close %></td>
         <td><%= link_to 'Edit', edit_close_path(close) %></td>
         <td><%= link_to 'Destroy', close, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

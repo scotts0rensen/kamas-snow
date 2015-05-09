@@ -49,6 +49,10 @@ header li.selected a {
   background-color: blue;
 }
 
+.block {
+  display: inline-block;
+}
+
 .menu_id {
   display: none;
 }
