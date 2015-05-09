@@ -74,6 +74,6 @@ class InventoriesController < ApplicationController
       :tigers_blood, :utes, :watermelon, :wedding_cake, :wildcat, :dreamcicle,
       :sodium_benzoate, :citric_acid, :sour_snow, :spoons_full, :spoons_partial,
       :straws, :napkins, :paper_towells, :gloves, :large_garbage_bags, :small_garbage_bags,
-      :order_pads, :hc, :scm, :ev, :chocolate, :pop_rocks)
+      :order_pads, :hc, :scm, :em, :chocolate, :pop_rocks)
   end
 end

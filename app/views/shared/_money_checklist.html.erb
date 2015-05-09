@@ -8,7 +8,7 @@
       </li>
     <% else %>
       <li class="strong">
-        <%= f.text_field config.name, class: "total", disabled: true %>
+        <%= f.text_field config.name, class: "total", readonly: true %>
         <%= config.label %>
       </li>
     <% end %>

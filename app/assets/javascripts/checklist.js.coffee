@@ -13,7 +13,10 @@ $ ->
   display_notice()
   highlight_current_menu()
 
-  $(".auto-submit select,input[type=checkbox],input[type=radio],input[type=number]").change (event) ->
+  $(".auto-submit select,input[type=checkbox],input[type=radio]").change (event) ->
+    $(this).parents("form").submit()
+
+  $(".auto-submit-field").change (event) ->
     $(this).parents("form").submit()
 
   $(".count-money input[type=number]").change (event) ->
@@ -26,6 +29,7 @@ $ ->
       tot = parseFloat(total_ele.val().substring(1))
       tot = (tot + sub).toFixed(2)
       total_ele.val("$" + tot.toString())
+    $(this).parents("form").submit()
 
   $(".count-cups input[type=number]").change (event) ->
     row = $(this).closest(".row")
@@ -36,3 +40,4 @@ $ ->
       sub = parseInt($(count).val() || 0) * parseInt($(count).data("amount"))
       tot = parseInt(total.val()) + sub
       total.val(tot.toString())
+    $(this).parents("form").submit()
