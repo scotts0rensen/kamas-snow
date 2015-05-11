@@ -74,6 +74,17 @@ class InventoriesController < ApplicationController
       :tigers_blood, :utes, :watermelon, :wedding_cake, :wildcat, :dreamcicle,
       :sodium_benzoate, :citric_acid, :sour_snow, :spoons_full, :spoons_partial,
       :straws, :napkins, :paper_towells, :gloves, :large_garbage_bags, :small_garbage_bags,
-      :order_pads, :hc, :scm, :em, :chocolate, :pop_rocks)
+      :order_pads, :hc, :scm, :em, :chocolate, :pop_rocks,
+      :ice_cream_home, :sugar_home, :dish_soap_home,
+      :hand_soap_home, :bleach_home, :pine_sol_home, :snowball_home,
+      :mountain_home, :glacier_home, :avalanche_home,
+      :bahama_mama_home, :banana_home, :blueberry_home,
+      :blue_raspberry_home, :bubble_gum_home, :byu_home, :cherry_home, :coconut_home, :cotton_candy_home,
+      :grape_home, :georgia_peach_home, :green_apple_home, :lime_home, :mango_home, :orange_home, :pina_colada_home,
+      :pineapple_home, :pink_lemonade_home, :rootbeer_home, :silver_fox_home, :strawberry_home,
+      :tigers_blood_home, :utes_home, :watermelon_home, :wedding_cake_home, :wildcat_home, :dreamcicle_home,
+      :sodium_benzoate_home, :citric_acid_home, :sour_snow_home, :spoons_home,
+      :straws_home, :napkins_home, :paper_towells_home, :gloves_home, :large_garbage_bags_home, :small_garbage_bags_home,
+      :order_pads_home, :hc_home, :scm_home, :em_home, :chocolate_home, :pop_rocks_home)
   end
 end

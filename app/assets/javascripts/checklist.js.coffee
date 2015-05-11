@@ -10,8 +10,13 @@ $ ->
     menu_id = $(".menu_id").val()
     $("#" + menu_id).addClass("selected")
 
+  hide_home_inventory = ->
+    $(".home").addClass("hidden")
+
+
   display_notice()
   highlight_current_menu()
+  hide_home_inventory()
 
   $(".auto-submit select,input[type=checkbox],input[type=radio]").change (event) ->
     $(this).parents("form").submit()
@@ -41,3 +46,7 @@ $ ->
       tot = parseInt(total.val()) + sub
       total.val(tot.toString())
     $(this).parents("form").submit()
+
+  $(document).keypress "h", (event) ->
+    if event.ctrlKey
+      $(".home").toggleClass("hidden")

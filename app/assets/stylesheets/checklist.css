@@ -6,6 +6,10 @@ body {
   display: none;
 }
 
+.hidden {
+  display: none !important;
+}
+
 header {
   width: 900px;
   margin: 0 auto;
@@ -180,3 +184,6 @@ input[type=checkbox], input[type=radio] {
   font-size: 1.8em;
 }
 
+.indent {
+  padding-left: 20px;
+}

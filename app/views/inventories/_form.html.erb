@@ -15,29 +15,40 @@
 
   <h2>Freezer/Shed</h2>
   <div class="table">
+    <div class="header row home">
+      <div class="cell">&nbsp;</div>
+      <div class="cell">Onsite</div>
+      <div class="cell">Home</div>
+    </div>
     <div class="row">
       <div class="cell row-header">Ice Cream</div>
       <div class="cell"><%= f.number_field "ice_cream", min: 0, class: "count auto-submit-field" %></div>
+      <div class="cell home"><%= f.number_field "ice_cream_home", min: 0, class: "count auto-submit-field" %></div>
     </div>
     <div class="row">
       <div class="cell row-header">Sugar</div>
       <div class="cell"><%= f.number_field "sugar", min: 0, class: "count auto-submit-field" %></div>
+      <div class="cell home"><%= f.number_field "sugar_home", min: 0, class: "count auto-submit-field" %></div>
     </div>
     <div class="row">
       <div class="cell row-header">Dish Soap</div>
       <div class="cell"><%= f.select :dish_soap, ["Almost gone"], include_blank: true %></div>
+      <div class="cell home"><%= f.number_field "dish_soap_home", min: 0, class: "count auto-submit-field" %></div>
     </div>
     <div class="row">
       <div class="cell row-header">Hand Soap</div>
       <div class="cell"><%= f.select "hand_soap", ["Almost gone"], include_blank: true %></div>
+      <div class="cell home"><%= f.number_field "hand_soap_home", min: 0, class: "count auto-submit-field" %></div>
     </div>
     <div class="row">
       <div class="cell row-header">Bleach</div>
       <div class="cell"><%= f.select "bleach", ["Almost gone"], include_blank: true %></div>
+      <div class="cell home"><%= f.number_field "bleach_home", min: 0, class: "count auto-submit-field" %></div>
     </div>
     <div class="row">
       <div class="cell row-header">Pine-Sol</div>
       <div class="cell"><%= f.select "pine_sol", ["Almost gone"], include_blank: true %></div>
+      <div class="cell home"><%= f.number_field "pine_sol_home", min: 0, class: "count auto-submit-field" %></div>
     </div>
   </div>
 
@@ -51,6 +62,7 @@
       <div class="cell">Shed Sleeves</div>
       <div class="cell">Inside Sleeves</div>
       <div class="cell">Loose Cups</div>
+      <div class="cell home">Home Sleeves</div>
       <div class="cell">Total</div>
     </div>
     <div class="row">
@@ -58,28 +70,32 @@
       <div class="cell"><%= f.number_field "snowball_shed", min: 0, class: "count", "data-amount"=>"20" %></div>
       <div class="cell"><%= f.number_field "snowball_sleeves", min: 0, class: "count", "data-amount"=>"20" %></div>
       <div class="cell"><%= f.number_field "snowball_loose", min: 0, class: "count", "data-amount"=>"1" %></div>
-      <div class="cell"><%= f.text_field "snowball_total", class: "total", disabled: true %></div>
+      <div class="cell home"><%= f.number_field "snowball_home", min: 0, class: "count", "data-amount"=>"20" %></div>
+      <div class="cell"><%= f.text_field "snowball_total", class: "total", readonly: true %></div>
     </div>
     <div class="row">
       <div class="cell row-header">Mountain</div>
       <div class="cell"><%= f.number_field "mountain_shed", min: 0, class: "count", "data-amount"=>"20" %></div>
       <div class="cell"><%= f.number_field "mountain_sleeves", min: 0, class: "count", "data-amount"=>"20" %></div>
       <div class="cell"><%= f.number_field "mountain_loose", min: 0, class: "count", "data-amount"=>"1" %></div>
-      <div class="cell"><%= f.text_field "mountain_total", class: "total", disabled: true %></div>
+      <div class="cell home"><%= f.number_field "mountain_home", min: 0, class: "count", "data-amount"=>"20" %></div>
+      <div class="cell"><%= f.text_field "mountain_total", class: "total", readonly: true %></div>
     </div>
     <div class="row">
       <div class="cell row-header">Glacier</div>
       <div class="cell"><%= f.number_field "glacier_shed", min: 0, class: "count", "data-amount"=>"20" %></div>
       <div class="cell"><%= f.number_field "glacier_sleeves", min: 0, class: "count", "data-amount"=>"20" %></div>
       <div class="cell"><%= f.number_field "glacier_loose", min: 0, class: "count", "data-amount"=>"1" %></div>
-      <div class="cell"><%= f.text_field "glacier_total", class: "total", disabled: true %></div>
+      <div class="cell home"><%= f.number_field "glacier_home", min: 0, class: "count", "data-amount"=>"20" %></div>
+      <div class="cell"><%= f.text_field "glacier_total", class: "total", readonly: true %></div>
     </div>
     <div class="row">
       <div class="cell row-header">Avalanche</div>
       <div class="cell"><%= f.number_field "avalanche_shed", min: 0, class: "count", "data-amount"=>"20" %></div>
       <div class="cell"><%= f.number_field "avalanche_sleeves", min: 0, class: "count", "data-amount"=>"20" %></div>
       <div class="cell"><%= f.number_field "avalanche_loose", min: 0, class: "count", "data-amount"=>"1" %></div>
-      <div class="cell"><%= f.text_field "avalanche_total", class: "total", disabled: true %></div>
+      <div class="cell home"><%= f.number_field "avalanche_home", min: 0, class: "count", "data-amount"=>"20" %></div>
+      <div class="cell"><%= f.text_field "avalanche_total", class: "total", readonly: true %></div>
     </div>
   </div>
 
@@ -116,59 +132,85 @@
       <div class="cell row-header">&nbsp;</div>
       <div class="cell">Unopened</div>
       <div class="cell">Opened</div>
+      <div class="cell home indent">Home</div>
     </div>
     <div class="row">
       <div class="cell row-header">Spoons</div>
       <div class="cell"><%= f.number_field "spoons_full", min: 0, class: "count auto-submit-field" %></div>
       <div class="cell"><%= f.select "spoons_partial", ["Full", "3/4", "1/2", "1/4", "Empty"], include_blank: true %></div>
+      <div class="cell home indent"><%= f.number_field "spoons_home", min: 0, class: "count auto-submit-field" %></div>
     </div>
     <div class="row">
       <div class="cell row-header">Straws</div>
       <div class="cell"><%= f.number_field "straws", min: 0, class: "count auto-submit-field" %></div>
+      <div class="cell home">&nbsp;</div>
+      <div class="cell home indent"><%= f.number_field "straws_home", min: 0, class: "count auto-submit-field" %></div>
     </div>
     <div class="row">
       <div class="cell row-header">Napkins</div>
       <div class="cell"><%= f.number_field "napkins", min: 0, class: "count auto-submit-field" %></div>
+      <div class="cell home">&nbsp;</div>
+      <div class="cell home indent"><%= f.number_field "napkins_home", min: 0, class: "count auto-submit-field" %></div>
     </div>
     <div class="row">
       <div class="cell row-header">Paper Towells</div>
       <div class="cell"><%= f.number_field "paper_towells", min: 0, class: "count auto-submit-field" %></div>
+      <div class="cell home">&nbsp;</div>
+      <div class="cell home indent"><%= f.number_field "paper_towells_home", min: 0, class: "count auto-submit-field" %></div>
     </div>
     <div class="row">
       <div class="cell row-header">Gloves</div>
       <div class="cell"><%= f.number_field "gloves", min: 0, class: "count auto-submit-field" %></div>
+      <div class="cell home">&nbsp;</div>
+      <div class="cell home indent"><%= f.number_field "gloves_home", min: 0, class: "count auto-submit-field" %></div>
     </div>
     <div class="row">
       <div class="cell row-header">Large garbage bags</div>
       <div class="cell"><%= f.select "large_garbage_bags", ["Almost gone"], include_blank: true %></div>
+      <div class="cell home">&nbsp;</div>
+      <div class="cell home indent"><%= f.number_field "large_garbage_bags_home", min: 0, class: "count auto-submit-field" %></div>
     </div>
     <div class="row">
       <div class="cell row-header">Small garbage bags</div>
       <div class="cell"><%= f.select "small_garbage_bags", ["Almost gone"], include_blank: true %></div>
+      <div class="cell home">&nbsp;</div>
+      <div class="cell home indent"><%= f.number_field "small_garbage_bags_home", min: 0, class: "count auto-submit-field" %></div>
     </div>
     <div class="row">
       <div class="cell row-header">Order pads</div>
       <div class="cell"><%= f.select "order_pads", ["Almost gone"], include_blank: true %></div>
+      <div class="cell home">&nbsp;</div>
+      <div class="cell home indent"><%= f.number_field "order_pads_home", min: 0, class: "count auto-submit-field" %></div>
     </div>
     <div class="row">
       <div class="cell row-header">Heavy Cream</div>
       <div class="cell"><%= f.number_field "hc", min: 0, class: "count auto-submit-field" %></div>
+      <div class="cell home">&nbsp;</div>
+      <div class="cell home indent"><%= f.number_field "hc_home", min: 0, class: "count auto-submit-field" %></div>
     </div>
     <div class="row">
       <div class="cell row-header">SCM</div>
       <div class="cell"><%= f.number_field "scm", min: 0, class: "count auto-submit-field" %></div>
+      <div class="cell home">&nbsp;</div>
+      <div class="cell home indent"><%= f.number_field "scm_home", min: 0, class: "count auto-submit-field" %></div>
     </div>
     <div class="row">
       <div class="cell row-header">Evaporated Milk</div>
       <div class="cell"><%= f.number_field "em", min: 0, class: "count auto-submit-field" %></div>
+      <div class="cell home">&nbsp;</div>
+      <div class="cell home indent"><%= f.number_field "em_home", min: 0, class: "count auto-submit-field" %></div>
     </div>
     <div class="row">
       <div class="cell row-header">Chocolate Syrup</div>
       <div class="cell"><%= f.select "chocolate", ["Almost gone"], include_blank: true %></div>
+      <div class="cell home">&nbsp;</div>
+      <div class="cell home indent"><%= f.number_field "chocolate_home", min: 0, class: "count auto-submit-field" %></div>
     </div>
     <div class="row">
       <div class="cell row-header">Pop Rocks</div>
       <div class="cell"><%= f.select "pop_rocks", ["Almost gone"], include_blank: true %></div>
+      <div class="cell home">&nbsp;</div>
+      <div class="cell home indent"><%= f.number_field "pop_rocks_home", min: 0, class: "count auto-submit-field" %></div>
     </div>
   </div>
 <% end %>
