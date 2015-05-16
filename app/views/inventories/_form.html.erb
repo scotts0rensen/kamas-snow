@@ -142,14 +142,14 @@
     </div>
     <div class="row">
       <div class="cell row-header">Straws</div>
-      <div class="cell"><%= f.number_field "straws", min: 0, class: "count auto-submit-field" %></div>
-      <div class="cell home">&nbsp;</div>
+      <div class="cell"><%= f.number_field "straws_full", min: 0, class: "count auto-submit-field" %></div>
+      <div class="cell"><%= f.select "straws_partial", ["Full", "3/4", "1/2", "1/4", "Empty"], include_blank: true %></div>
       <div class="cell home indent"><%= f.number_field "straws_home", min: 0, class: "count auto-submit-field" %></div>
     </div>
     <div class="row">
       <div class="cell row-header">Napkins</div>
-      <div class="cell"><%= f.number_field "napkins", min: 0, class: "count auto-submit-field" %></div>
-      <div class="cell home">&nbsp;</div>
+      <div class="cell"><%= f.number_field "napkins_full", min: 0, class: "count auto-submit-field" %></div>
+      <div class="cell"><%= f.select "napkins_partial", ["Full", "3/4", "1/2", "1/4", "Empty"], include_blank: true %></div>
       <div class="cell home indent"><%= f.number_field "napkins_home", min: 0, class: "count auto-submit-field" %></div>
     </div>
     <div class="row">
@@ -202,7 +202,7 @@
     </div>
     <div class="row">
       <div class="cell row-header">Chocolate Syrup</div>
-      <div class="cell"><%= f.select "chocolate", ["Almost gone"], include_blank: true %></div>
+      <div class="cell"><%= f.number_field "chocolate", min: 0, class: "count auto-submit-field" %></div>
       <div class="cell home">&nbsp;</div>
       <div class="cell home indent"><%= f.number_field "chocolate_home", min: 0, class: "count auto-submit-field" %></div>
     </div>

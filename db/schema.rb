@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150511213234) do
+ActiveRecord::Schema.define(version: 20150516190008) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -138,8 +138,8 @@ ActiveRecord::Schema.define(version: 20150511213234) do
     t.string   "sour_snow"
     t.integer  "spoons_full"
     t.string   "spoons_partial"
-    t.integer  "straws"
-    t.integer  "napkins"
+    t.integer  "straws_full"
+    t.integer  "napkins_full"
     t.integer  "paper_towells"
     t.integer  "gloves"
     t.string   "large_garbage_bags"
@@ -148,7 +148,7 @@ ActiveRecord::Schema.define(version: 20150511213234) do
     t.integer  "hc"
     t.integer  "scm"
     t.integer  "em"
-    t.string   "chocolate"
+    t.integer  "chocolate"
     t.string   "pop_rocks"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -205,6 +205,8 @@ ActiveRecord::Schema.define(version: 20150511213234) do
     t.integer  "em_home"
     t.integer  "chocolate_home"
     t.integer  "pop_rocks_home"
+    t.string   "straws_partial"
+    t.string   "napkins_partial"
   end
 
   create_table "open_details", force: true do |t|

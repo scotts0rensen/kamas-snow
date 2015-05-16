@@ -73,7 +73,7 @@ class InventoriesController < ApplicationController
       :pineapple, :pink_lemonade, :rootbeer, :silver_fox, :strawberry,
       :tigers_blood, :utes, :watermelon, :wedding_cake, :wildcat, :dreamcicle,
       :sodium_benzoate, :citric_acid, :sour_snow, :spoons_full, :spoons_partial,
-      :straws, :napkins, :paper_towells, :gloves, :large_garbage_bags, :small_garbage_bags,
+      :straws_full, :straws_partial, :napkins_full, :napkins_partial, :paper_towells, :gloves, :large_garbage_bags, :small_garbage_bags,
       :order_pads, :hc, :scm, :em, :chocolate, :pop_rocks,
       :ice_cream_home, :sugar_home, :dish_soap_home,
       :hand_soap_home, :bleach_home, :pine_sol_home, :snowball_home,
