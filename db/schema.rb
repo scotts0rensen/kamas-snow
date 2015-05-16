@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150516190008) do
+ActiveRecord::Schema.define(version: 20150516231417) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -207,6 +207,14 @@ ActiveRecord::Schema.define(version: 20150516190008) do
     t.integer  "pop_rocks_home"
     t.string   "straws_partial"
     t.string   "napkins_partial"
+    t.integer  "aprons_home"
+    t.integer  "uniform_shirts_home"
+    t.integer  "baseball_caps_home"
+    t.integer  "clip_boards_home"
+    t.integer  "squeeze_bottles_home"
+    t.integer  "sweet_thickener_home"
+    t.integer  "bottle_caps_home"
+    t.integer  "ten_gallon_spigot_home"
   end
 
   create_table "open_details", force: true do |t|

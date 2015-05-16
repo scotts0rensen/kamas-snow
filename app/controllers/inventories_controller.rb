@@ -91,6 +91,9 @@ class InventoriesController < ApplicationController
       :tigers_blood_home, :utes_home, :watermelon_home, :wedding_cake_home, :wildcat_home, :dreamcicle_home,
       :sodium_benzoate_home, :citric_acid_home, :sour_snow_home, :spoons_home,
       :straws_home, :napkins_home, :paper_towells_home, :gloves_home, :large_garbage_bags_home, :small_garbage_bags_home,
-      :order_pads_home, :hc_home, :scm_home, :em_home, :chocolate_home, :pop_rocks_home)
+      :order_pads_home, :hc_home, :scm_home, :em_home, :chocolate_home, :pop_rocks_home,
+      :aprons_home, :uniform_shirts_home, :baseball_caps_home, :clip_boards_home, :squeeze_bottles_home,
+      :sweet_thickener_home, :bottle_caps_home, :ten_gallon_spigot_home
+    )
   end
 end
