@@ -1,0 +1,15 @@
+<h4><%= title %></h4>
+<table style="margin-left:20px">
+  <% ChecklistConfig.where(checklist_type: checklist_type, section: section).order(:order).each do |config| %>
+    <tr>
+      <% amt = inventory.send config.name.to_sym %>
+      <% desc = "Full" if amt == "1" %>
+      <% desc = "3/4" if amt == ".75" %>
+      <% desc = "1/2" if amt == ".50" %>
+      <% desc = "1/4" if amt == ".25" %>
+      <% desc = "Empty" if amt == "0" %>
+      <td><strong><%= "#{config.label}:" %></strong></td>
+      <td><%= desc %></td>
+    </tr>
+  <% end %>
+</table>

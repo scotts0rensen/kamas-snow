@@ -55,6 +55,12 @@ class InventoriesController < ApplicationController
     end
   end
 
+  def email
+    inventory = Inventory.where(date: params[:date]).first
+    InventoryMailer.submit(inventory).deliver
+    render nothing: true
+  end
+
   private
 
   def set_inventory

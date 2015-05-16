@@ -18,6 +18,9 @@ $ ->
   highlight_current_menu()
   hide_home_inventory()
 
+  $("#open_inventory").change (event) ->
+    $.post "/inventory_email", date: $("#open_date").val()
+
   $(".auto-submit select,input[type=checkbox],input[type=radio]").change (event) ->
     $(this).parents("form").submit()
 

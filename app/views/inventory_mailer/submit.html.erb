@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h3>Freezer/Shed</h3>
+    <table style="margin-left:20px">
+      <tr>
+        <td><strong>Ice Cream:</strong></td>
+        <td><%= @inventory.ice_cream %></td>
+      </tr>
+      <tr>
+        <td><strong>Sugar:</strong></td>
+        <td><%= @inventory.sugar %></td>
+      </tr>
+      <tr>
+        <td><strong>Dish Soap:</strong></td>
+        <td><%= @inventory.dish_soap %></td>
+      </tr>
+      <tr>
+        <td><strong>Hand Soap:</strong></td>
+        <td><%= @inventory.hand_soap %></td>
+      </tr>
+      <tr>
+        <td><strong>Bleach:</strong></td>
+        <td><%= @inventory.bleach %></td>
+      </tr>
+      <tr>
+        <td><strong>Pine-Sol:</strong></td>
+        <td><%= @inventory.pine_sol %></td>
+      </tr>
+    </table>
+
+    <h3>Cups</h3>
+    <table style="margin-left:20px">
+      <tr>
+        <td><strong>Snowball:</strong></td>
+        <td><%= "Shed: #{@inventory.snowball_shed} Inside: #{@inventory.snowball_sleeves}" %></td>
+      </tr>
+      <tr>
+        <td><strong>Mountain:</strong></td>
+        <td><%= "Shed: #{@inventory.mountain_shed} Inside: #{@inventory.mountain_sleeves}" %></td>
+      </tr>
+      <tr>
+        <td><strong>Glacier:</strong></td>
+        <td><%= "Shed: #{@inventory.glacier_shed} Inside: #{@inventory.glacier_sleeves}" %></td>
+      </tr>
+      <tr>
+        <td><strong>Avalanche:</strong></td>
+        <td><%= "Shed: #{@inventory.avalanche_shed} Inside: #{@inventory.avalanche_sleeves}" %></td>
+      </tr>
+    </table>
+
+    <h3>Flavors</h3>
+    <%= render partial: "flavors",
+      locals: {inventory: @inventory, checklist_type: "inventory", section: "reds", title: "Reds"} %>
+
+    <%= render partial: "flavors",
+      locals: {inventory: @inventory, checklist_type: "inventory", section: "pinks_oranges", title: "Pinks/Oranges"} %>
+
+    <%= render partial: "flavors",
+      locals: {inventory: @inventory, checklist_type: "inventory", section: "yellows", title: "Yellows"} %>
+
+    <%= render partial: "flavors",
+      locals: {inventory: @inventory, checklist_type: "inventory", section: "greens_browns", title: "Greens/Browns"} %>
+
+    <%= render partial: "flavors",
+      locals: {inventory: @inventory, checklist_type: "inventory", section: "blues_purples", title: "Blues/Purples"} %>
+
+    <%= render partial: "flavors",
+      locals: {inventory: @inventory, checklist_type: "inventory", section: "whites", title: "Whites"} %>
+
+    <%= render partial: "flavors",
+      locals: {inventory: @inventory, checklist_type: "inventory", section: "other", title: "Other"} %>
+
+    <h3>Other</h3>
+    <table style="margin-left:20px">
+      <tr>
+        <td><strong>Spoons:</strong></td>
+        <td><%= "#{@inventory.spoons_full} #{@inventory.spoons_partial}" %></td>
+      </tr>
+      <tr>
+        <td><strong>Straws:</strong></td>
+        <td><%= "#{@inventory.straws_full} #{@inventory.straws_partial}" %></td>
+      </tr>
+      <tr>
+        <td><strong>Napkins:</strong></td>
+        <td><%= "#{@inventory.napkins_full} #{@inventory.napkins_partial}" %></td>
+      </tr>
+      <tr>
+        <td><strong>Paper Towells:</strong></td>
+        <td><%= @inventory.paper_towells %></td>
+      </tr>
+      <tr>
+        <td><strong>Gloves:</strong></td>
+        <td><%= @inventory.gloves %></td>
+      </tr>
+      <tr>
+        <td><strong>Large garbage bags:</strong></td>
+        <td><%= @inventory.large_garbage_bags %></td>
+      </tr>
+      <tr>
+        <td><strong>Small garbage bags:</strong></td>
+        <td><%= @inventory.small_garbage_bags %></td>
+      </tr>
+      <tr>
+        <td><strong>Order pads:</strong></td>
+        <td><%= @inventory.order_pads %></td>
+      </tr>
+      <tr>
+        <td><strong>Heavy Cream:</strong></td>
+        <td><%= @inventory.hc %></td>
+      </tr>
+      <tr>
+        <td><strong>SCM:</strong></td>
+        <td><%= @inventory.scm %></td>
+      </tr>
+      <tr>
+        <td><strong>Evaporated Milk:</strong></td>
+        <td><%= @inventory.em %></td>
+      </tr>
+      <tr>
+        <td><strong>Chocolate Syrup:</strong></td>
+        <td><%= @inventory.chocolate %></td>
+      </tr>
+      <tr>
+        <td><strong>Pop Rocks:</strong></td>
+        <td><%= @inventory.pop_rocks %></td>
+      </tr>
+    </table>
+  </body>
+</html>

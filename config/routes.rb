@@ -10,6 +10,7 @@ KamasSnow::Application.routes.draw do
   get 'close' => 'closes#close'
   get 'shift' => 'shifts#shift'
   get 'inventory' => 'inventories#inventory'
+  post 'inventory_email' => 'inventories#email'
   get 'cups' => 'cups#cups'
 
   resources :checklist_configs
