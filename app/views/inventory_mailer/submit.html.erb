@@ -4,70 +4,111 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
+
+    <br/>
+    <hr/>
     <h3>Freezer/Shed</h3>
     <table style="margin-left:20px">
-      <tr>
-        <td><strong>Ice Cream:</strong></td>
-        <td><%= @inventory.ice_cream %></td>
-      </tr>
-      <tr>
-        <td><strong>Sugar:</strong></td>
-        <td><%= @inventory.sugar %></td>
-      </tr>
-      <tr>
-        <td><strong>Dish Soap:</strong></td>
-        <td><%= @inventory.dish_soap %></td>
-      </tr>
-      <tr>
-        <td><strong>Hand Soap:</strong></td>
-        <td><%= @inventory.hand_soap %></td>
-      </tr>
-      <tr>
-        <td><strong>Bleach:</strong></td>
-        <td><%= @inventory.bleach %></td>
-      </tr>
-      <tr>
-        <td><strong>Pine-Sol:</strong></td>
-        <td><%= @inventory.pine_sol %></td>
-      </tr>
+      <% if @inventory.ice_cream.present? && @inventory.ice_cream <= 2 %>
+        <tr>
+          <td><strong>Ice Cream:</strong></td>
+          <td><%= @inventory.ice_cream %></td>
+          <td>(refill to 10)</td>
+        </tr>
+      <% end %>
+      <% if @inventory.sugar.present? && @inventory.sugar <= 2 %>
+        <tr>
+          <td><strong>Sugar:</strong></td>
+          <td><%= @inventory.sugar %></td>
+          <td>(refill to 10)</td>
+        </tr>
+      <% end %>
+      <% if @inventory.dish_soap.present? && @inventory.dish_soap == "Almost gone" %>
+        <tr>
+          <td><strong>Dish Soap:</strong></td>
+          <td><%= @inventory.dish_soap %></td>
+        </tr>
+      <% end %>
+      <% if @inventory.hand_soap.present? && @inventory.hand_soap == "Almost gone" %>
+        <tr>
+          <td><strong>Hand Soap:</strong></td>
+          <td><%= @inventory.hand_soap %></td>
+        </tr>
+      <% end %>
+      <% if @inventory.bleach.present? && @inventory.bleach == "Almost gone" %>
+        <tr>
+          <td><strong>Bleach:</strong></td>
+          <td><%= @inventory.bleach %></td>
+        </tr>
+      <% end %>
+      <% if @inventory.pine_sol.present? && @inventory.pine_sol == "Almost gone" %>
+        <tr>
+          <td><strong>Pine-Sol:</strong></td>
+          <td><%= @inventory.pine_sol %></td>
+        </tr>
+      <% end %>
     </table>
 
+    <br/>
+    <hr/>
     <h3>Cups</h3>
     <table style="margin-left:20px">
-      <tr>
-        <td><strong>Snowball:</strong></td>
-        <td>
-          <%= "Shed: #{@inventory.snowball_shed}" %>&nbsp;&nbsp;&nbsp;&nbsp;
-          <%= "Inside: #{@inventory.snowball_sleeves}" %>&nbsp;&nbsp;&nbsp;&nbsp;
-          <%= "Total: #{@inventory.snowball_shed.to_i + @inventory.snowball_sleeves.to_i}" %>
-        </td>
-      </tr>
-      <tr>
-        <td><strong>Mountain:</strong></td>
-        <td>
-          <%= "Shed: #{@inventory.mountain_shed}" %>&nbsp;&nbsp;&nbsp;&nbsp;
-          <%= "Inside: #{@inventory.mountain_sleeves}" %>&nbsp;&nbsp;&nbsp;&nbsp;
-          <%= "Total: #{@inventory.mountain_shed.to_i + @inventory.mountain_sleeves.to_i}" %>
-        </td>
-      </tr>
-      <tr>
-        <td><strong>Glacier:</strong></td>
-        <td>
-          <%= "Shed: #{@inventory.glacier_shed}" %>&nbsp;&nbsp;&nbsp;&nbsp;
-          <%= "Inside: #{@inventory.glacier_sleeves}" %>&nbsp;&nbsp;&nbsp;&nbsp;
-          <%= "Total: #{@inventory.glacier_shed.to_i + @inventory.glacier_sleeves.to_i}" %>
-        </td>
-      </tr>
-      <tr>
-        <td><strong>Avalanche:</strong></td>
-        <td>
-          <%= "Shed: #{@inventory.avalanche_shed}" %>&nbsp;&nbsp;&nbsp;&nbsp;
-          <%= "Inside: #{@inventory.avalanche_sleeves}" %>&nbsp;&nbsp;&nbsp;&nbsp;
-          <%= "Total: #{@inventory.avalanche_shed.to_i + @inventory.avalanche_sleeves.to_i}" %>
-        </td>
-      </tr>
+
+      <% total = @inventory.snowball_shed.to_i + @inventory.snowball_sleeves.to_i %>
+      <% if total <= 3 %>
+        <tr>
+          <td><strong>Snowball:</strong></td>
+          <td>
+            <%= "Shed: #{@inventory.snowball_shed}" %>&nbsp;&nbsp;&nbsp;&nbsp;
+            <%= "Inside: #{@inventory.snowball_sleeves}" %>&nbsp;&nbsp;&nbsp;&nbsp;
+            <%= "Total: #{@inventory.snowball_shed.to_i + @inventory.snowball_sleeves.to_i}" %>
+          </td>
+          <td>(refill to 10)</td>
+        </tr>
+      <% end %>
+
+      <% total = @inventory.mountain_shed.to_i + @inventory.mountain_sleeves.to_i %>
+      <% if total <= 2 %>
+        <tr>
+          <td><strong>Mountain:</strong></td>
+          <td>
+            <%= "Shed: #{@inventory.mountain_shed}" %>&nbsp;&nbsp;&nbsp;&nbsp;
+            <%= "Inside: #{@inventory.mountain_sleeves}" %>&nbsp;&nbsp;&nbsp;&nbsp;
+            <%= "Total: #{@inventory.mountain_shed.to_i + @inventory.mountain_sleeves.to_i}" %>
+          </td>
+          <td>(refill to 5)</td>
+        </tr>
+      <% end %>
+
+      <% total = @inventory.glacier_shed.to_i + @inventory.glacier_sleeves.to_i %>
+      <% if total <= 1 %>
+        <tr>
+          <td><strong>Glacier:</strong></td>
+          <td>
+            <%= "Shed: #{@inventory.glacier_shed}" %>&nbsp;&nbsp;&nbsp;&nbsp;
+            <%= "Inside: #{@inventory.glacier_sleeves}" %>&nbsp;&nbsp;&nbsp;&nbsp;
+            <%= "Total: #{@inventory.glacier_shed.to_i + @inventory.glacier_sleeves.to_i}" %>
+          </td>
+          <td>(refill to 5)</td>
+        </tr>
+      <% end %>
+
+      <% total = @inventory.avalanche_shed.to_i + @inventory.avalanche_sleeves.to_i %>
+      <% if total <= 1 %>
+        <tr>
+          <td><strong>Avalanche:</strong></td>
+          <td>
+            <%= "Shed: #{@inventory.avalanche_shed}" %>&nbsp;&nbsp;&nbsp;&nbsp;
+            <%= "Inside: #{@inventory.avalanche_sleeves}" %>&nbsp;&nbsp;&nbsp;&nbsp;
+            <%= "Total: #{@inventory.avalanche_shed.to_i + @inventory.avalanche_sleeves.to_i}" %>
+          </td>
+          <td>(refill to 2)</td>
+        </tr>
+      <% end %>
     </table>
 
+    <br/>
+    <hr/>
     <h3>Flavors</h3>
     <%= render partial: "flavors",
       locals: {inventory: @inventory, checklist_type: "inventory", section: "reds", title: "Reds"} %>
@@ -90,60 +131,110 @@
     <%= render partial: "flavors",
       locals: {inventory: @inventory, checklist_type: "inventory", section: "other", title: "Other"} %>
 
+    <br/>
+    <hr/>
     <h3>Other</h3>
     <table style="margin-left:20px">
-      <tr>
-        <td><strong>Spoons:</strong></td>
-        <td><%= "#{@inventory.spoons_full} #{@inventory.spoons_partial}" %></td>
-      </tr>
-      <tr>
-        <td><strong>Straws:</strong></td>
-        <td><%= "#{@inventory.straws_full} #{@inventory.straws_partial}" %></td>
-      </tr>
-      <tr>
-        <td><strong>Napkins:</strong></td>
-        <td><%= "#{@inventory.napkins_full} #{@inventory.napkins_partial}" %></td>
-      </tr>
-      <tr>
-        <td><strong>Paper Towells:</strong></td>
-        <td><%= @inventory.paper_towells %></td>
-      </tr>
-      <tr>
-        <td><strong>Gloves:</strong></td>
-        <td><%= @inventory.gloves %></td>
-      </tr>
-      <tr>
-        <td><strong>Large garbage bags:</strong></td>
-        <td><%= @inventory.large_garbage_bags %></td>
-      </tr>
-      <tr>
-        <td><strong>Small garbage bags:</strong></td>
-        <td><%= @inventory.small_garbage_bags %></td>
-      </tr>
-      <tr>
-        <td><strong>Order pads:</strong></td>
-        <td><%= @inventory.order_pads %></td>
-      </tr>
-      <tr>
-        <td><strong>Heavy Cream:</strong></td>
-        <td><%= @inventory.hc %></td>
-      </tr>
-      <tr>
-        <td><strong>SCM:</strong></td>
-        <td><%= @inventory.scm %></td>
-      </tr>
-      <tr>
-        <td><strong>Evaporated Milk:</strong></td>
-        <td><%= @inventory.em %></td>
-      </tr>
-      <tr>
-        <td><strong>Chocolate Syrup:</strong></td>
-        <td><%= @inventory.chocolate %></td>
-      </tr>
-      <tr>
-        <td><strong>Pop Rocks:</strong></td>
-        <td><%= @inventory.pop_rocks %></td>
-      </tr>
+      <% binding.pry %>
+      <% if @inventory.spoons_full.to_i == 0 && (@inventory.spoons_partial == "1/4" || @inventory.spoons_partial == "Empty") %>
+        <tr>
+          <td><strong>Spoons:</strong></td>
+          <td><%= "#{@inventory.spoons_full} #{@inventory.spoons_partial}" %></td>
+          <td>(refill to 1)</td>
+        </tr>
+      <% end %>
+
+      <% if @inventory.straws_full.to_i <= 1 %>
+        <tr>
+          <td><strong>Straws:</strong></td>
+          <td><%= "#{@inventory.straws_full} #{@inventory.straws_partial}" %></td>
+          <td>(refill to 4)</td>
+        </tr>
+      <% end %>
+
+      <% if @inventory.napkins_full.to_i == 0 && (@inventory.napkins_partial == "1/2" || @inventory.napkins_partial == "1/4" || @inventory.napkins_partial == "Empty") %>
+        <tr>
+          <td><strong>Napkins:</strong></td>
+          <td><%= "#{@inventory.napkins_full} #{@inventory.napkins_partial}" %></td>
+          <td>(refill to 2)</td>
+        </tr>
+      <% end %>
+
+      <% if @inventory.paper_towells.to_i <= 1 %>
+        <tr>
+          <td><strong>Paper Towells:</strong></td>
+          <td><%= @inventory.paper_towells %></td>
+          <td>(refill to 2)</td>
+        </tr>
+      <% end %>
+
+      <% if @inventory.gloves.to_i <= 1 %>
+        <tr>
+          <td><strong>Gloves:</strong></td>
+          <td><%= @inventory.gloves %></td>
+          <td>(refill to 2)</td>
+        </tr>
+      <% end %>
+
+      <% if @inventory.large_garbage_bags.present? && @inventory.large_garbage_bags == "Almost gone" %>
+        <tr>
+          <td><strong>Large garbage bags:</strong></td>
+          <td><%= @inventory.large_garbage_bags %></td>
+        </tr>
+      <% end %>
+
+      <% if @inventory.small_garbage_bags.present? && @inventory.small_garbage_bags == "Almost gone" %>
+        <tr>
+          <td><strong>Small garbage bags:</strong></td>
+          <td><%= @inventory.small_garbage_bags %></td>
+        </tr>
+      <% end %>
+
+      <% if @inventory.order_pads.present? && @inventory.order_pads == "Almost gone" %>
+        <tr>
+          <td><strong>Order pads:</strong></td>
+          <td><%= @inventory.order_pads %></td>
+        </tr>
+      <% end %>
+
+      <% if @inventory.hc.to_i <= 1 %>
+        <tr>
+          <td><strong>Heavy Cream:</strong></td>
+          <td><%= @inventory.hc %></td>
+          <td>(refill to 3)</td>
+        </tr>
+      <% end %>
+
+      <% if @inventory.scm.to_i <= 2 %>
+        <tr>
+          <td><strong>SCM:</strong></td>
+          <td><%= @inventory.scm %></td>
+          <td>(refill to 6)</td>
+        </tr>
+      <% end %>
+
+      <% if @inventory.em.to_i <= 1 %>
+        <tr>
+          <td><strong>Evaporated Milk:</strong></td>
+          <td><%= @inventory.em %></td>
+          <td>(refill to 3)</td>
+        </tr>
+      <% end %>
+
+      <% if @inventory.chocolate.to_i <= 0 %>
+        <tr>
+          <td><strong>Chocolate Syrup:</strong></td>
+          <td><%= @inventory.chocolate %></td>
+          <td>(refill to 1)</td>
+        </tr>
+      <% end %>
+
+      <% if @inventory.pop_rocks.present? && @inventory.pop_rocks == "Almost gone" %>
+        <tr>
+          <td><strong>Pop Rocks:</strong></td>
+          <td><%= @inventory.pop_rocks %></td>
+        </tr>
+      <% end %>
     </table>
   </body>
 </html>
