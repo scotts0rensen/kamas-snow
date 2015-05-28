@@ -59,15 +59,13 @@
   <div class="count-cups table">
     <div class="header row">
       <div class="cell">&nbsp;</div>
-      <div class="cell">Shed Sleeves</div>
-      <div class="cell">Inside Sleeves</div>
+      <div class="cell">Sleeves</div>
       <div class="cell">Loose Cups</div>
       <div class="cell home">Home Sleeves</div>
       <div class="cell">Total</div>
     </div>
     <div class="row">
       <div class="cell row-header">Snow Ball</div>
-      <div class="cell"><%= f.number_field "snowball_shed", min: 0, class: "count", "data-amount"=>"40" %></div>
       <div class="cell"><%= f.number_field "snowball_sleeves", min: 0, class: "count", "data-amount"=>"40" %></div>
       <div class="cell"><%= f.number_field "snowball_loose", min: 0, class: "count", "data-amount"=>"1" %></div>
       <div class="cell home"><%= f.number_field "snowball_home", min: 0, class: "count", "data-amount"=>"40" %></div>
@@ -75,7 +73,6 @@
     </div>
     <div class="row">
       <div class="cell row-header">Mountain</div>
-      <div class="cell"><%= f.number_field "mountain_shed", min: 0, class: "count", "data-amount"=>"25" %></div>
       <div class="cell"><%= f.number_field "mountain_sleeves", min: 0, class: "count", "data-amount"=>"25" %></div>
       <div class="cell"><%= f.number_field "mountain_loose", min: 0, class: "count", "data-amount"=>"1" %></div>
       <div class="cell home"><%= f.number_field "mountain_home", min: 0, class: "count", "data-amount"=>"25" %></div>
@@ -83,7 +80,6 @@
     </div>
     <div class="row">
       <div class="cell row-header">Glacier</div>
-      <div class="cell"><%= f.number_field "glacier_shed", min: 0, class: "count", "data-amount"=>"20" %></div>
       <div class="cell"><%= f.number_field "glacier_sleeves", min: 0, class: "count", "data-amount"=>"20" %></div>
       <div class="cell"><%= f.number_field "glacier_loose", min: 0, class: "count", "data-amount"=>"1" %></div>
       <div class="cell home"><%= f.number_field "glacier_home", min: 0, class: "count", "data-amount"=>"20" %></div>
@@ -91,7 +87,6 @@
     </div>
     <div class="row">
       <div class="cell row-header">Avalanche</div>
-      <div class="cell"><%= f.number_field "avalanche_shed", min: 0, class: "count", "data-amount"=>"20" %></div>
       <div class="cell"><%= f.number_field "avalanche_sleeves", min: 0, class: "count", "data-amount"=>"20" %></div>
       <div class="cell"><%= f.number_field "avalanche_loose", min: 0, class: "count", "data-amount"=>"1" %></div>
       <div class="cell home"><%= f.number_field "avalanche_home", min: 0, class: "count", "data-amount"=>"20" %></div>

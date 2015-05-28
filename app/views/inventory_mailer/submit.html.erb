@@ -58,11 +58,7 @@
       <% if total <= 3 %>
         <tr>
           <td><strong>Snowball:</strong></td>
-          <td>
-            <%= "Shed: #{@inventory.snowball_shed}" %>&nbsp;&nbsp;&nbsp;&nbsp;
-            <%= "Inside: #{@inventory.snowball_sleeves}" %>&nbsp;&nbsp;&nbsp;&nbsp;
-            <%= "Total: #{@inventory.snowball_shed.to_i + @inventory.snowball_sleeves.to_i}" %>
-          </td>
+          <td><%= @inventory.snowball_sleeves %></td>
           <td>(refill to 10)</td>
         </tr>
       <% end %>
@@ -71,11 +67,7 @@
       <% if total <= 2 %>
         <tr>
           <td><strong>Mountain:</strong></td>
-          <td>
-            <%= "Shed: #{@inventory.mountain_shed}" %>&nbsp;&nbsp;&nbsp;&nbsp;
-            <%= "Inside: #{@inventory.mountain_sleeves}" %>&nbsp;&nbsp;&nbsp;&nbsp;
-            <%= "Total: #{@inventory.mountain_shed.to_i + @inventory.mountain_sleeves.to_i}" %>
-          </td>
+          <td><%= @inventory.mountain_sleeves %></td>
           <td>(refill to 5)</td>
         </tr>
       <% end %>
@@ -84,11 +76,7 @@
       <% if total <= 1 %>
         <tr>
           <td><strong>Glacier:</strong></td>
-          <td>
-            <%= "Shed: #{@inventory.glacier_shed}" %>&nbsp;&nbsp;&nbsp;&nbsp;
-            <%= "Inside: #{@inventory.glacier_sleeves}" %>&nbsp;&nbsp;&nbsp;&nbsp;
-            <%= "Total: #{@inventory.glacier_shed.to_i + @inventory.glacier_sleeves.to_i}" %>
-          </td>
+          <td><%= @inventory.glacier_sleeves %></td>
           <td>(refill to 5)</td>
         </tr>
       <% end %>
@@ -97,11 +85,7 @@
       <% if total <= 1 %>
         <tr>
           <td><strong>Avalanche:</strong></td>
-          <td>
-            <%= "Shed: #{@inventory.avalanche_shed}" %>&nbsp;&nbsp;&nbsp;&nbsp;
-            <%= "Inside: #{@inventory.avalanche_sleeves}" %>&nbsp;&nbsp;&nbsp;&nbsp;
-            <%= "Total: #{@inventory.avalanche_shed.to_i + @inventory.avalanche_sleeves.to_i}" %>
-          </td>
+          <td><%= @inventory.avalanche_sleeves %></td>
           <td>(refill to 2)</td>
         </tr>
       <% end %>
@@ -135,7 +119,6 @@
     <hr/>
     <h3>Other</h3>
     <table style="margin-left:20px">
-      <% binding.pry %>
       <% if @inventory.spoons_full.to_i == 0 && (@inventory.spoons_partial == "1/4" || @inventory.spoons_partial == "Empty") %>
         <tr>
           <td><strong>Spoons:</strong></td>
