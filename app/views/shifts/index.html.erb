@@ -12,7 +12,7 @@
   <tbody>
     <% @shifts.each do |shift| %>
       <tr>
-        <td><%= shift.date %></td>
+        <td><%= shift.date.strftime("%A, %B %e") %></td>
         <td><%= link_to 'Edit', edit_shift_path(shift) %></td>
         <td><%= link_to 'Destroy', shift, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

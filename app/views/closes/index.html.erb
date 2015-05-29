@@ -12,7 +12,7 @@
   <tbody>
     <% @closes.each do |close| %>
       <tr>
-        <td><%= close.date %></td>
+        <td><%= close.date.strftime("%A, %B %e") %></td>
         <td><%= link_to 'Edit', edit_close_path(close) %></td>
         <td><%= link_to 'Destroy', close, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
