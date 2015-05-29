@@ -50,6 +50,20 @@ $ ->
       total.val(tot.toString())
     $(this).parents("form").submit()
 
+  $("#flavors input[type=number], #flavors input[type=radio]").change (event) ->
+    total_ele = $("#inventory_flavors_total")
+    $(total_ele).val("0")
+    $("#flavors").find("input[type=radio]").each (index, radio) ->
+      if $(radio).is(':checked')
+        sub = parseFloat($(radio).val() || 0)
+        tot = parseFloat(total_ele.val()) + sub
+        total_ele.val(tot.toString())
+    $("#flavors").find(".count").each (index, count) ->
+      sub = parseFloat($(count).val() || 0)
+      tot = parseFloat(total_ele.val()) + sub
+      total_ele.val(tot.toString())
+    $(this).parents("form").submit()
+
   $(document).keypress "h", (event) ->
     if event.ctrlKey
       $(".home").toggleClass("hidden")

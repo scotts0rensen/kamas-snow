@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150516231417) do
+ActiveRecord::Schema.define(version: 20150528222959) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -215,6 +215,7 @@ ActiveRecord::Schema.define(version: 20150516231417) do
     t.integer  "sweet_thickener_home"
     t.integer  "bottle_caps_home"
     t.integer  "ten_gallon_spigot_home"
+    t.integer  "flavors_total"
   end
 
   create_table "open_details", force: true do |t|

@@ -16,7 +16,7 @@
       <div class="cell"><%= f.radio_button config.name, ".50" %></div>
       <div class="cell"><%= f.radio_button config.name, ".25" %></div>
       <div class="cell"><%= f.radio_button config.name, "0" %></div>
-      <div class="cell home indent"><%= f.number_field "#{config.name}_home", min: 0, class: "count auto-submit-field" %></div>
+      <div class="cell home indent"><%= f.number_field "#{config.name}_home", min: 0, class: "count" %></div>
     </div>
   <% end %>
 </div>

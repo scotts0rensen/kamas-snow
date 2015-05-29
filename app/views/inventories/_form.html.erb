@@ -97,6 +97,7 @@
   <hr/>
 
   <h2>Flavor Concentrates</h2>
+  <div id="flavors">
 
   <%= render partial: "shared/flavors_checklist",
     locals: {f: f, checklist_type: "inventory", section: "reds", title: "Reds"} %>
@@ -118,6 +119,15 @@
 
   <%= render partial: "shared/flavors_checklist",
     locals: {f: f, checklist_type: "inventory", section: "other", title: "Other"} %>
+
+  <div class="table home">
+    <div class="row">
+      <div class="cell row-header">Flavors total (qts)</div>
+      <div class="cell"><%= f.text_field "flavors_total", class: "total", readonly: true %></div>
+    </div>
+  </div>
+
+  </div>
 
   <br/>
   <hr/>

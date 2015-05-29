@@ -55,7 +55,7 @@
     <table style="margin-left:20px">
 
       <% total = @inventory.snowball_shed.to_i + @inventory.snowball_sleeves.to_i %>
-      <% if total <= 3 %>
+      <% if total <= 4 %>
         <tr>
           <td><strong>Snowball:</strong></td>
           <td><%= @inventory.snowball_sleeves %></td>
