@@ -57,7 +57,6 @@ checklist type, section, "speaker_down", "Put speaker on charger base", "require
 checklist type, section, "close_awnings", "Close awnings", "required", 2
 checklist type, section, "outside_trash", "Pick up garbage outside", "optional", 3
 checklist type, section, "close_umbrellas", "Close umbrellas", "optional", 4
-checklist type, section, "gray_water", "Empty gray water", "optional", 5
 
 section = "money"
 checklist type, section, "quarters", "Quarters -- 20", "required", 1, ".25"
@@ -82,15 +81,18 @@ checklist type, section, "dirty_rags", "Put dirty rags in green basket", "requir
 checklist type, section, "trash_cans", "Empty both trash cans", "required", 12
 checklist type, section, "floor", "Mop floor", "required", 13
 checklist type, section, "pump_off", "Turn off water pump", "required", 14
-checklist type, section, "garbage_can_in", "Put garbage can inside", "required", 15
-checklist type, section, "water_off", "Disconnect water and lock rear door", "required", 16
-checklist type, section, "lock_freezer", "Lock ice freezer and shed", "required", 17
-checklist type, section, "lock_awnings", "Lock awnings and window", "required", 18
-checklist type, section, "clock_out", "Clock out", "required", 19
-checklist type, section, "hide_ipad", "Hide ipad", "required", 20
-checklist type, section, "lock_trailer", "Lock trailer", "required", 21
-checklist type, section, "throw_trash", "Throw trash away behind Food Town", "required", 22
-checklist type, section, "deliver_stuff", "Deliver empty sugar bucket, blue money zipper bag, keys, and full green rag basket to Sorensens", "required", 23
+
+section = "finish"
+checklist type, section, "garbage_can_in", "Put garbage can inside", "required", 2
+checklist type, section, "gray_water", "Empty gray water", "optional", 3
+checklist type, section, "water_off", "Disconnect water and lock rear door", "required", 4
+checklist type, section, "lock_freezer", "Lock ice freezer and shed", "required", 5
+checklist type, section, "lock_awnings", "Lock awnings and window", "required", 6
+checklist type, section, "clock_out", "Clock out", "required", 7
+checklist type, section, "hide_ipad", "Hide ipad", "required", 8
+checklist type, section, "lock_trailer", "Lock trailer", "required", 9
+checklist type, section, "throw_trash", "Throw trash away behind Food Town", "required", 10
+checklist type, section, "deliver_stuff", "Deliver empty sugar bucket, blue money zipper bag, keys, and full green rag basket to Sorensens", "required", 11
 
 
 
