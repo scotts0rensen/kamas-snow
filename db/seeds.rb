@@ -31,12 +31,13 @@ checklist type, section, "make_sani", "Make new sanitized water", "required", 2
 checklist type, section, "rags_out", "Get 4 fresh rags (1 wet, 1 dry, per side)", "required", 3
 checklist type, section, "fill_paper", "Fill napkins, straws, and spoons", "optional", 4
 checklist type, section, "wash_nightcaps", "Remove nightcaps and wash", "optional", 5
-checklist type, section, "fill_flavors", "Fill flavors", "optional", 6
-checklist type, section, "fill_scm", "Fill SCM and HC", "optional", 7
-checklist type, section, "sugar_water", "Make sugar water", "optional", 8
-checklist type, section, "dishes_away", "Put clean dishes away", "optional", 9
-checklist type, section, "counters", "Wipe down walls, countertops, shelves, door, curtains, fridge, freezer", "optional", 4
-checklist type, section, "inventory", "Inventory", "required", 11
+checklist type, section, "spouts_rinse", "Rinse pour spouts and put on bottles facing left", "optional", 6
+checklist type, section, "fill_flavors", "Fill flavors", "optional", 7
+checklist type, section, "fill_scm", "Fill SCM and HC", "optional", 8
+checklist type, section, "sugar_water", "Make sugar water", "optional", 9
+checklist type, section, "dishes_away", "Put clean dishes away", "optional", 10
+checklist type, section, "counters", "Wipe down walls, countertops, shelves, door, curtains, fridge, freezer", "optional", 11
+checklist type, section, "inventory", "Inventory", "required", 12
 
 section = "outside"
 checklist type, section, "outside_trash", "Pick up garbage outside", "optional", 1
@@ -75,12 +76,13 @@ checklist type, section, "syrup_bottles", "Wipe off syrup bottles and put on nig
 checklist type, section, "remove_ice", "Remove ice and put in freezer or bucket", "required", 6
 checklist type, section, "wipe_shaver", "Clean shaver with sani-water and wipe dry", "required", 7
 checklist type, section, "wash_dishes", "Wash dishes and leave to air dry", "required", 8
-checklist type, section, "street", "Dump excess snow bucket and brush street", "optional", 9
-checklist type, section, "empty_sani", "Empty sanitized water", "required", 10
-checklist type, section, "dirty_rags", "Put dirty rags in green basket", "required", 11
-checklist type, section, "trash_cans", "Empty both trash cans", "required", 12
-checklist type, section, "floor", "Mop floor", "required", 13
-checklist type, section, "pump_off", "Turn off water pump", "required", 14
+checklist type, section, "spouts_soak", "Soak pour spouts in hot soapy water", "optional", 9
+checklist type, section, "street", "Dump excess snow bucket and brush street", "optional", 10
+checklist type, section, "empty_sani", "Empty sanitized water", "required", 11
+checklist type, section, "dirty_rags", "Put dirty rags in green basket", "required", 12
+checklist type, section, "trash_cans", "Empty both trash cans", "required", 13
+checklist type, section, "floor", "Mop floor", "required", 14
+checklist type, section, "pump_off", "Turn off water pump", "required", 15
 
 section = "finish"
 checklist type, section, "garbage_can_in", "Put garbage can inside", "required", 2
