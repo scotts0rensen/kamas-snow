@@ -72,11 +72,11 @@ checklist type, section, "envelope", "Put remaining money, punch cards, refund r
 checklist type, section, "hide_cash_box", "Lock cash box and put behind garbage can", "required", 2
 checklist type, section, "sugar_water", "Make sugar water", "optional", 3
 checklist type, section, "counters", "Wipe down walls, countertops, shelves, door, curtains, fridge, freezer", "optional", 4
-checklist type, section, "syrup_bottles", "Wipe off syrup bottles and put on night caps", "required", 5
-checklist type, section, "remove_ice", "Remove ice and put in freezer or bucket", "required", 6
-checklist type, section, "wipe_shaver", "Clean shaver with sani-water and wipe dry", "required", 7
-checklist type, section, "wash_dishes", "Wash dishes and leave to air dry", "required", 8
-checklist type, section, "spouts_soak", "Soak pour spouts in hot soapy water", "optional", 9
+checklist type, section, "remove_ice", "Remove ice and put in freezer or bucket", "required", 5
+checklist type, section, "wipe_shaver", "Clean shaver with sani-water and wipe dry", "required", 6
+checklist type, section, "wash_dishes", "Wash dishes (Don't forget ice cream scoop!) and leave to air dry", "required", 7
+checklist type, section, "spouts_soak", "Soak pour spouts in hot soapy water", "optional", 8
+checklist type, section, "syrup_bottles", "Wipe off syrup bottles and put on night caps", "required", 9
 checklist type, section, "street", "Dump excess snow bucket and brush street", "optional", 10
 checklist type, section, "empty_sani", "Empty sanitized water", "required", 11
 checklist type, section, "dirty_rags", "Put dirty rags in green basket", "required", 12
