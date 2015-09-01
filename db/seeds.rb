@@ -44,7 +44,7 @@ checklist type, section, "outside_trash", "Pick up garbage outside", "optional",
 checklist type, section, "open_umbrellas", "Open umbrellas (unless too windy)", "optional", 2
 checklist type, section, "tables", "Clean tables and benches", "optional", 3
 checklist type, section, "trailer_sides", "Wipe down sides of trailer", "optional", 4
-checklist type, section, "gray_water", "Empty gray water", "optional", 5
+checklist type, section, "gray_water", "Empty gray water and dump inside FoodTown", "optional", 5
 checklist type, section, "trash_can", "Put out large trash can with new bag", "required", 6
 checklist type, section, "open_awnings", "Open awnings", "required", 7
 checklist type, section, "speaker_up", "Put speaker on top of awning", "required", 8
@@ -86,7 +86,7 @@ checklist type, section, "pump_off", "Turn off water pump", "required", 15
 
 section = "finish"
 checklist type, section, "garbage_can_in", "Put garbage can inside", "required", 2
-checklist type, section, "gray_water", "Empty gray water", "optional", 3
+checklist type, section, "gray_water", "Empty gray water and dump inside FoodTown", "optional", 3
 checklist type, section, "water_off", "Disconnect water and lock rear door", "required", 4
 checklist type, section, "lock_freezer", "Lock ice freezer and shed", "required", 5
 checklist type, section, "lock_awnings", "Lock awnings and window", "required", 6
